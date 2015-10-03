@@ -135,7 +135,12 @@ int openGLTest()
    return 1;
 }
 
-
+int imageDisplayTest()
+{
+   std::string fileLocation = "Hello.tga";
+   GLFWimage testImage;
+   if( ( glfwReadImage ( name, &pointer1, GLFW_NO_RESCALE_BIT ) ) == GL_TRUE ){};
+}
 
 
 
