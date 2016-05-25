@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="101" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="stateStorage.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="864" topLine="9" />
-		</Cursor>
-		<Folding>
-			<Collapse line="5" />
-		</Folding>
-	</File>
 	<File name="MainLoop\MainLoop.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="180" topLine="11" />
@@ -23,5 +10,29 @@
 		<Cursor>
 			<Cursor1 position="323" topLine="13" />
 		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="101" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="stateStorage.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2264" topLine="59" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="65" />
+			<Collapse line="68" />
+			<Collapse line="74" />
+			<Collapse line="82" />
+			<Collapse line="92" />
+			<Collapse line="97" />
+			<Collapse line="102" />
+			<Collapse line="110" />
+			<Collapse line="113" />
+			<Collapse line="118" />
+			<Collapse line="123" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>

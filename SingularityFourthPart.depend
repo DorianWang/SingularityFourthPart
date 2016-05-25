@@ -1,9 +1,14 @@
 # depslib dependency file v1.0
-1463501992 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
+1463504610 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
 	<iostream>
+	"stateStorage.h"
 
 1463502634 source:c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
 
 1463504511 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
+
+1463678114 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
+	<cstdio>
+	<cstring>
 
