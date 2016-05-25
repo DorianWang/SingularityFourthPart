@@ -43,7 +43,6 @@ public:
    inline bool* getCurrentKey();
 
    //Setting functions
-   //They have to be public because of outside callers.
    inline void setMouse(int xPos, int yPos, int mouseButton);
    inline void setKeyboard(char keyDown);
    inline void setCurrentKey(char keyDown);
@@ -127,6 +126,7 @@ private:
 
    //}
 
+
    //Setting functions
    //{
 
@@ -136,11 +136,15 @@ private:
    }
 
    void stateStorage::setKeyboard(char keyDown)
-
+   {
+      keyState[keyDown] = true;
+   }
 
    void stateStorage::setCurrentKey(char keyDown)
-
-
+   {
+      resetCurrentKey();
+      currentKeyState[keyDown] = true;
+   }
 
    //}
 
