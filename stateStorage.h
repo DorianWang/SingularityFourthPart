@@ -18,6 +18,14 @@ typedef struct mouseInfo
    int clickType;
 };
 
+typedef struct globalEffect
+{
+   int effectType;
+   int duration; //In turns. -1 for forever.
+};
+
+
+
 //}
 
 class stateStorage
@@ -54,6 +62,7 @@ private:
    mouseInfo mouseState;
    bool keyState[NUM_KEYS];
    bool currentKeyState[NUM_KEYS];
+   std::list <globalEffect> globalEffectList;
 
 };
 

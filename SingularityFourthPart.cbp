@@ -14,6 +14,8 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="MainLoop" />
+					<Add directory="locationMap" />
+					<Add directory="location" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +26,8 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="MainLoop" />
+					<Add directory="locationMap" />
+					<Add directory="location" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,6 +40,10 @@
 		</Compiler>
 		<Unit filename="MainLoop/MainLoop.cpp" />
 		<Unit filename="MainLoop/MainLoop.h" />
+		<Unit filename="locationMap/locationMap.cpp" />
+		<Unit filename="locationMap/locationMap.h" />
+		<Unit filename="location/location.cpp" />
+		<Unit filename="location/location.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="stateStorage.h" />
 		<Extensions>
