@@ -5,6 +5,8 @@
 #include <cstdio>
 #include <cstring>
 
+#include <map>
+
 #define NUM_KEYS 256
 
 
@@ -45,11 +47,13 @@ public:
    inline void resetMouse();
    inline void resetKeyboard();
    inline void resetCurrentKey();
+   inline void resetEffects();
 
    //Getting functions
    inline mouseInfo* getMouse();
    inline bool* getKeyboard();
    inline bool* getCurrentKey();
+   inline std::map <int, int>* getGlobalEffects();
 
    //Setting functions
    inline void setMouse(int xPos, int yPos, int mouseButton);
@@ -113,6 +117,11 @@ private:
       memset(currentKeyState, 0, numKeys);
    }
 
+   void stateStorage::resetEffects()
+   {
+      globalEffectList.clear();
+   }
+
    //}
 
 
@@ -132,6 +141,11 @@ private:
    bool* stateStorage::getCurrentKey()
    {
       return currentKeyState;
+   }
+
+   std::map <int, int> * stateStorage::getGlobalEffects()
+   {
+      return &globalEffectList;
    }
 
    //}
@@ -154,6 +168,11 @@ private:
    {
       resetCurrentKey();
       currentKeyState[keyDown] = true;
+   }
+
+   void stateStorage::addGlobalEffect(int key, int duration)
+   {
+      globalEffectList.insert(key, duration);
    }
 
    //}

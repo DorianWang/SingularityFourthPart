@@ -1,8 +1,9 @@
 #ifndef LOCATIONMAP_H
 #define LOCATIONMAP_H
 
+#include <vector>
 
-
+#include "location.h"
 
 class locationMap
 {
@@ -11,7 +12,7 @@ class locationMap
       ~locationMap();
    protected:
    private:
-      vector <location> locationList;
+      std::vector <location> locationList;
 };
 
 
