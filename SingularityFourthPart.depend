@@ -12,3 +12,29 @@
 	<cstdio>
 	<cstring>
 
+1464835563 source:d:\dorian's programs\singularityfourthpart\main.cpp
+	<iostream>
+	"stateStorage.h"
+
+1466043654 d:\dorian's programs\singularityfourthpart\statestorage.h
+	<cstdio>
+	<cstring>
+	<map>
+
+1464835563 source:d:\dorian's programs\singularityfourthpart\mainloop\mainloop.cpp
+	"MainLoop.h"
+
+1464835563 d:\dorian's programs\singularityfourthpart\mainloop\mainloop.h
+
+1464835563 source:d:\dorian's programs\singularityfourthpart\location\location.cpp
+	"location.h"
+
+1464835563 d:\dorian's programs\singularityfourthpart\location\location.h
+
+1464835563 source:d:\dorian's programs\singularityfourthpart\locationmap\locationmap.cpp
+	"locationMap.h"
+
+1466028650 d:\dorian's programs\singularityfourthpart\locationmap\locationmap.h
+	<vector>
+	"location.h"
+

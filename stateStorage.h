@@ -59,7 +59,8 @@ public:
    inline void setMouse(int xPos, int yPos, int mouseButton);
    inline void setKeyboard(char keyDown);
    inline void setCurrentKey(char keyDown);
-
+   inline bool addGlobalEffect(int key, int duration);
+   inline void setGlobalEffects(std::map <int, int> newGlobalEffects);
 
 private:
 
@@ -170,9 +171,16 @@ private:
       currentKeyState[keyDown] = true;
    }
 
-   void stateStorage::addGlobalEffect(int key, int duration)
+   bool stateStorage::addGlobalEffect(int key, int duration)
    {
-      globalEffectList.insert(key, duration);
+      bool isNewDuration = duration > globalEffectList[key];
+      globalEffectList[key] = std::max(globalEffectList[key], duration);
+      return isNewDuration;
+   }
+
+   void stateStorage::setGlobalEffects(std::map <int, int> newGlobalEffects)
+   {
+      globalEffectList = newGlobalEffects;
    }
 
    //}
