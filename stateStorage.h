@@ -60,6 +60,7 @@ public:
    inline void setKeyboard(char keyDown);
    inline void setCurrentKey(char keyDown);
    inline bool addGlobalEffect(int key, int duration);
+   inline void removeGlobalEffect(int key);
    inline void setGlobalEffects(std::map <int, int> newGlobalEffects);
 
 private:
@@ -178,10 +179,20 @@ private:
       return isNewDuration;
    }
 
+   void stateStorage::removeGlobalEffect(int key)
+   {
+      std::map <int,int>::iterator it = globalEffectList.find(key);
+      if (it != globalEffectList.end()){
+         globalEffectList.erase(key);
+      }
+   }
+
    void stateStorage::setGlobalEffects(std::map <int, int> newGlobalEffects)
    {
       globalEffectList = newGlobalEffects;
    }
+
+
 
    //}
 
