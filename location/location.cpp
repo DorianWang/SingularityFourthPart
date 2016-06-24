@@ -1,11 +1,11 @@
-#include "location.h"
+#include "Location.h"
 
-location::location()
+Location::Location()
 {
    //ctor
 }
 
-location::~location()
+Location::~Location()
 {
    //dtor
 }
