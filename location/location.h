@@ -11,6 +11,8 @@
 #define HUGE_LOCATION 128
 #define MASSIVE_LOCATION 256
 
+//Modifiers for the three types of risk.
+// 1000 is base value, 0 is no risk, etc.
 typedef struct riskModifiers
 {
    int publicModifier;
