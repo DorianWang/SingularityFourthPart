@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1463504610 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
+1466439308 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
 
-1463502634 source:c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.cpp
+1466439308 source:c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
 
-1463504511 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
+1466439308 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
 
-1463678114 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
+1466439312 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
 	<cstdio>
 	<cstring>
+	<map>
 
 1464835563 source:d:\dorian's programs\singularityfourthpart\main.cpp
 	<iostream>
@@ -37,4 +38,11 @@
 1466028650 d:\dorian's programs\singularityfourthpart\locationmap\locationmap.h
 	<vector>
 	"location.h"
+
+1467495606 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
+	"Location.h"
+
+1467495545 c:\users\admin\documents\github\singularityfourthpart\location\location.h
+	<string>
+	<map>
 

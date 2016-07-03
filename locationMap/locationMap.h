@@ -12,7 +12,7 @@ class locationMap
       ~locationMap();
    protected:
    private:
-      std::vector <location> locationList;
+      std::vector <Location> locationList;
 };
 
 

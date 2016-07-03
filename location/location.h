@@ -1,6 +1,10 @@
 #ifndef LOCATION_H
 #define LOCATION_H
 
+#include <string>
+#include <map>
+
+
 
 #define TINY_LOCATION 2
 #define VERY_SMALL_LOCATION 4
@@ -13,25 +17,25 @@
 
 //Modifiers for the three types of risk.
 // 1000 is base value, 0 is no risk, etc.
-typedef struct riskModifiers
+struct riskModifiers
 {
    int publicModifier;
    int mediaModifier;
    int covertModifier;
-}
+};
 
 
 
 class Location
 {
    public:
-      Location();
+      Location(int baseCost, int baseCycles, );
       ~Location();
 
       std::string getDescription();
       void recalculate(); //Recalculates the risk, cycles and cost of the location.
       int getCycles(); //Returns the number of cycles the location provides.
-      int getRist(); //Returns the risk of the location.
+      int getRisk(); //Returns the risk of the location.
 
 
 
@@ -41,6 +45,7 @@ class Location
 
       int baseCost; //Base cost of the location. Does not change normally.
       int baseCycles; //Base number of cycles the location provides. Does not change normally.
+      int baseUpkeep; //Base amount of money required for location operation.
 
       bool isBuildable;
       int numCycles; //Number of cycles the location provides.
@@ -50,6 +55,21 @@ class Location
 
       int totalCost; //Total cost of the location. Takes into account improvements and such.
 
+      riskModifiers locationRiskModifiers; //Risk modifiers.
+
+      std::map <int, int> localEffects; //Theses are the modifiers on the location, and the duration.
+
 };
 
 #endif // LOCATION_H
+
+
+
+
+
+
+
+
+
+
+
