@@ -22,6 +22,8 @@ struct riskModifiers
    int publicModifier;
    int mediaModifier;
    int covertModifier;
+
+   int risk; //The risk of being detected, multiplied by 10000. (12 = 0.12%)
 };
 
 
@@ -29,14 +31,27 @@ struct riskModifiers
 class Location
 {
    public:
-      Location(int baseCost, int baseCycles, );
+      Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable);
       ~Location();
 
       std::string getDescription();
       void recalculate(); //Recalculates the risk, cycles and cost of the location.
-      int getCycles(); //Returns the number of cycles the location provides.
-      int getRisk(); //Returns the risk of the location.
 
+      int getCycles(); //Returns the number of cycles the location provides.
+      riskModifiers getRisk(); //Returns the risk of the location.
+      int getCost(); //Returns the cost of the location.
+      int getUpkeep(); //Returns the upkeep of the location.
+
+      int getBaseCycles();
+      int getBaseCost();
+      int getBaseUpkeep();
+
+      int getTotalSize();
+      int getNumEmptySpaces();
+
+
+
+      bool addDevice(); //TODO: Change later to actually do something.
 
 
 
@@ -48,16 +63,18 @@ class Location
       int baseUpkeep; //Base amount of money required for location operation.
 
       bool isBuildable;
-      int numCycles; //Number of cycles the location provides.
-      int risk; //The risk of being detected, multiplied by 10000. (12 = 0.12%)
       int totalSize; //The amount of building spots. If not buildable, it will still affect the description.
 
 
       int totalCost; //Total cost of the location. Takes into account improvements and such.
+      int numCycles; //Number of cycles the location provides.
 
       riskModifiers locationRiskModifiers; //Risk modifiers.
 
-      std::map <int, int> localEffects; //Theses are the modifiers on the location, and the duration.
+      std::map <int, int> localEffects; //These are the modifiers on the location, and the duration.
+
+      std::list <Device> containedDevices; //The devices at the location. These provide cycles, but cost risk, upkeep and spaces.
+      //TODO: Change int to device.
 
 };
 

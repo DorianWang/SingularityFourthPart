@@ -1,9 +1,13 @@
 #include "Location.h"
 
 
-Location::Location()
+Location::Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable)
 {
-   //ctor
+   this.baseCost = baseCost;
+   this.baseCycles = baseCycles;
+   this.baseUpkeep = baseUpkeep;
+   this.totalSize = numSpaces;
+   this.isBuildable = isBuildable
 }
 
 Location::~Location()
@@ -32,6 +36,7 @@ Location::~Location()
 
    //}
 
+
    //Getters
    //{
 
@@ -40,8 +45,20 @@ Location::~Location()
       return numCycles;
    }
 
+   riskModifiers Location::getRisk()
+   {
+      return locationRiskModifiers;
+   }
 
+   int Location::getCost()
+   {
+      return totalCost;
+   }
 
+   int Location::getUpkeep()
+   {
+      return numCycles;
+   }
 
    //}
 

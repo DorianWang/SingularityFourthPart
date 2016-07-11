@@ -1,6 +1,7 @@
 
 #include <iostream>
 
+//There was a GPL licence for Endgame:Singularity, so from what I have read, this would as well.
 
 
 #include "stateStorage.h"
