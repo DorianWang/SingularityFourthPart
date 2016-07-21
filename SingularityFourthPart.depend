@@ -13,7 +13,7 @@
 	<cstring>
 	<map>
 
-1464835563 source:d:\dorian's programs\singularityfourthpart\main.cpp
+1467862632 source:d:\dorian's programs\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
 
@@ -27,12 +27,14 @@
 
 1464835563 d:\dorian's programs\singularityfourthpart\mainloop\mainloop.h
 
-1464835563 source:d:\dorian's programs\singularityfourthpart\location\location.cpp
-	"location.h"
+1469048885 source:d:\dorian's programs\singularityfourthpart\location\location.cpp
+	"Location.h"
 
-1467835577 d:\dorian's programs\singularityfourthpart\location\location.h
+1469064651 d:\dorian's programs\singularityfourthpart\location\location.h
 	<string>
 	<map>
+	<list>
+	"Device.h"
 
 1464835563 source:d:\dorian's programs\singularityfourthpart\locationmap\locationmap.cpp
 	"locationMap.h"
@@ -47,4 +49,9 @@
 1467495545 c:\users\admin\documents\github\singularityfourthpart\location\location.h
 	<string>
 	<map>
+
+1468207046 source:d:\dorian's programs\singularityfourthpart\device\device.cpp
+	"Device.h"
+
+1469064702 d:\dorian's programs\singularityfourthpart\device\device.h
 

@@ -3,7 +3,9 @@
 
 #include <string>
 #include <map>
+#include <list>
 
+#include "Device.h"
 
 
 #define TINY_LOCATION 2
@@ -31,11 +33,10 @@ struct riskModifiers
 class Location
 {
    public:
-      Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable);
+      Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable, riskModifiers newRiskModifiers);
       ~Location();
 
       std::string getDescription();
-      void recalculate(); //Recalculates the risk, cycles and cost of the location.
 
       int getCycles(); //Returns the number of cycles the location provides.
       riskModifiers getRisk(); //Returns the risk of the location.
@@ -50,8 +51,15 @@ class Location
       int getNumEmptySpaces();
 
 
+      void recalculate(); //Recalculates the risk, cycles and cost of the location.
+      std::list <int> tick(); //Reduces the duration of modifiers, and returns expired modifiers.
 
-      bool addDevice(); //TODO: Change later to actually do something.
+      void addModifier(int modifier, int duration); //
+      void removeModifier(int modifier);
+      void setModifier(int modifier, int duration); //Overwrites.
+
+
+      bool addDevice(Device newDevice); //Adds the passed device to the location.
 
 
 
@@ -62,9 +70,8 @@ class Location
       int baseCycles; //Base number of cycles the location provides. Does not change normally.
       int baseUpkeep; //Base amount of money required for location operation.
 
-      bool isBuildable;
+      bool isBuildable; //If true, allows adding devices to the location.
       int totalSize; //The amount of building spots. If not buildable, it will still affect the description.
-
 
       int totalCost; //Total cost of the location. Takes into account improvements and such.
       int numCycles; //Number of cycles the location provides.
@@ -74,7 +81,8 @@ class Location
       std::map <int, int> localEffects; //These are the modifiers on the location, and the duration.
 
       std::list <Device> containedDevices; //The devices at the location. These provide cycles, but cost risk, upkeep and spaces.
-      //TODO: Change int to device.
+
+      std::string locationName;
 
 };
 
