@@ -17,37 +17,16 @@ Location::~Location()
    //dtor
 }
 
-//Setters and Getters
+//Getters and Setters
 //{
-
-   //Setters
-   //{
-
-
-
-
-
-
-   void Location::recalculate()
-   {
-      //Call all the functions to recalculate cycles, risk, risk modifiers, and leftover size.
-      //Or do it here, it doesn't really matter.
-   }
-
-   bool Location::addDevice(Device newDevice)
-   {
-      if (isBuildable && containedDevices.size() < totalSize){
-         containedDevices.push_back(newDivice);
-         return true;
-      }
-      return false;
-   }
-
-   //}
-
 
    //Getters
    //{
+
+   std::string Location::getDescription()
+   {
+      return locationName; //TODO: Make description.
+   }
 
    int Location::getCycles()
    {
@@ -69,12 +48,116 @@ Location::~Location()
       return numCycles;
    }
 
-   std::string Location::getDescription()
+
+   int Location::getBaseCycles()
    {
-      return locationName; //TODO: Make description.
+      return baseCycles;
+   }
+
+   int Location::getBaseCost()
+   {
+      return baseCost;
+   }
+
+   int Location::getBaseUpkeep()
+   {
+      return baseUpkeep;
+   }
+
+
+   int Location::getTotalSize()
+   {
+      return totalSize;
+   }
+
+   int Location::getNumEmptySpaces()
+   {
+      return totalSize - containedDevices.size();
+   }
+
+   int Location::getModifier(int modifier)
+   {
+      try
+      {
+         return localEffects.at(modifier);
+      }
+      catch(const std::out_of_range& oor)
+      {
+         return MODIFIER_NOT_INITIALIZED;
+      }
+   }
+
+   bool Location::hasActiveModifier(int modifier)
+   {
+      std::map <int, int>::iterator it = localEffects.find(modifier);
+      if (it != localEffects.end()){
+         if(it -> second == -1 || it -> second > 0){
+            return true;
+         }
+      }
+      return false;
+   }
+
+
+
+   //}
+
+
+
+
+
+   //Setters
+   //{
+
+   void Location::recalculate()
+   {
+      //Call all the functions to recalculate cycles, risk, risk modifiers, and leftover size.
+      //Or do it here, it doesn't really matter.
+   }
+
+   std::list <int> Location::tick()
+   {
+      //Reduces modifiers, does other things.
+   }
+
+
+
+   //Returns true if added, false if not.
+   bool Location::addModifier(int modifier, int duration)
+   {
+      std::map <int, int>::iterator it = localEffects.find(modifier);
+      if (it == localEffects.end() || it -> second == 0){
+         localEffects[modifier] = duration;
+         return true;
+      }
+      return false;
+   }
+
+   //TODO: _________________________________________________________________________________________________________
+   //Returns true if added, false if not.
+   bool Location::addModifier(int modifier, int duration)
+   {
+      std::map <int, int>::iterator it = localEffects.find(modifier);
+      if (it == localEffects.end() || it -> second == 0){
+         localEffects[modifier] = duration;
+         return true;
+      }
+      return false;
+   }
+
+   bool Location::addDevice(Device newDevice)
+   {
+      if (isBuildable && (containedDevices.size() < totalSize)){
+         containedDevices.push_back(newDevice);
+         return true;
+      }
+      return false;
    }
 
    //}
+
+
+
 
 
 
