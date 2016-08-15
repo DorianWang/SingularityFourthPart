@@ -61,11 +61,14 @@ class Location
       std::list <int> tick(); //Reduces the duration of modifiers, and returns expired modifiers.           | TODO: Do tick things later.
 
       bool addModifier(int modifier, int duration); //Adds a modifier if it doesn't already exist, or is 0. | Complete
-      void removeModifier(int modifier); //Removes a modifier, with no record of it existing.
+      void removeModifier(int modifier); //Removes a modifier, with no record of it existing.               | Complete
       void setModifier(int modifier, int duration); //Overwrites.
 
 
-      bool addDevice(Device newDevice); //Adds the passed device to the location.
+      bool addDevice(Device newDevice); //Adds the passed device to the location.                           | Complete for now
+
+
+
 
 
 

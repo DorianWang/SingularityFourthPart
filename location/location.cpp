@@ -133,16 +133,21 @@ Location::~Location()
       return false;
    }
 
-   //TODO: _________________________________________________________________________________________________________
-   //Returns true if added, false if not.
-   bool Location::addModifier(int modifier, int duration)
+   //Returns true if a modifier was removed, false if not.
+   bool Location::removeModifier(int modifier, int duration)
    {
       std::map <int, int>::iterator it = localEffects.find(modifier);
-      if (it == localEffects.end() || it -> second == 0){
-         localEffects[modifier] = duration;
+      if (it != localEffects.end()){
+         localEffects.erase(it);
          return true;
       }
       return false;
+   }
+
+   //Sets the selected modifier to the selected duration.
+   void Location::setModifier(int modifier, int duration)
+   {
+      localEffects[modifier] = duration;
    }
 
    bool Location::addDevice(Device newDevice)
