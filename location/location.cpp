@@ -2,7 +2,7 @@
 
 
 
-Location::Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable, riskModifiers newRiskModifiers)
+Location::Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable, riskModifiers newRiskModifiers, int newX, int newY)
 {
    this -> baseCost = baseCost;
    this -> baseCycles = baseCycles;
@@ -10,7 +10,8 @@ Location::Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, 
    this -> totalSize = numSpaces;
    this -> isBuildable = isBuildable;
    this -> locationRiskModifiers = newRiskModifiers;
-}
+   this -> locationAreaX = newX;
+   this -> locationAreaY = newY;
 
 Location::~Location()
 {
@@ -97,6 +98,7 @@ Location::~Location()
       }
       return false;
    }
+
 
 
 

@@ -35,7 +35,7 @@ struct riskModifiers
 class Location
 {
    public:
-      Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable, riskModifiers newRiskModifiers);
+      Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, bool isBuildable, riskModifiers newRiskModifiers, int newX, int newY);
       ~Location();
 
       std::string getDescription(); //Returns the description of the location.                              | TODO: Everything about the description.
@@ -62,10 +62,10 @@ class Location
 
       bool addModifier(int modifier, int duration); //Adds a modifier if it doesn't already exist, or is 0. | Complete
       void removeModifier(int modifier); //Removes a modifier, with no record of it existing.               | Complete
-      void setModifier(int modifier, int duration); //Overwrites.
+      void setModifier(int modifier, int duration); //Overwrites.                                           | Complete
 
 
-      bool addDevice(Device newDevice); //Adds the passed device to the location.                           | Complete for now
+      bool addDevice(Device newDevice); //Adds the passed device to the location.                           | Complete (for now)
 
 
 
@@ -91,7 +91,11 @@ class Location
 
       std::list <Device> containedDevices; //The devices at the location. These provide cycles, but cost risk, upkeep and spaces.
 
-      std::string locationName;
+      std::string locationName; // The displayed name of the location. This would appear on the map.
+
+      // Where the location should be displayed on the map.
+      int locationAreaX;
+      int locationAreaY;
 
 };
 
