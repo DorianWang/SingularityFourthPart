@@ -120,6 +120,8 @@ Location::~Location()
    std::list <int> Location::tick()
    {
       //Reduces modifiers, does other things.
+
+      //Removes decayed
    }
 
 
