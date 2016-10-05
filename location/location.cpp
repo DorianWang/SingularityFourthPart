@@ -12,11 +12,12 @@ Location::Location(int baseCost, int baseCycles, int baseUpkeep, int numSpaces, 
    this -> locationRiskModifiers = newRiskModifiers;
    this -> locationAreaX = newX;
    this -> locationAreaY = newY;
+}
 
 Location::~Location()
 {
    //dtor
-}
+};
 
 //Getters and Setters
 //{
@@ -100,11 +101,7 @@ Location::~Location()
    }
 
 
-
-
    //}
-
-
 
 
 
@@ -119,9 +116,21 @@ Location::~Location()
 
    std::list <int> Location::tick()
    {
-      //Reduces modifiers, does other things.
+      //There are other things to do in this.
 
-      //Removes decayed
+
+
+      //Removes decayed modifiers.
+      for (auto const &iter : localEffects){
+         if (iter.second == 0){
+            removeModifier(iter.first);
+         }
+      }
+
+      //Reduces modifiers
+      for (auto iter:localEffects){
+         if (iter.second != -1){ iter.second -= 1; }
+      }
    }
 
 
@@ -138,7 +147,7 @@ Location::~Location()
    }
 
    //Returns true if a modifier was removed, false if not.
-   bool Location::removeModifier(int modifier, int duration)
+   bool Location::removeModifier(int modifier)
    {
       std::map <int, int>::iterator it = localEffects.find(modifier);
       if (it != localEffects.end()){

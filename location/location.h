@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <list>
+#include <stdexcept>
 
 #include "Device.h"
 
@@ -23,7 +24,7 @@
 // 1000 is base value, 0 is no risk, etc.
 struct riskModifiers
 {
-   int publicModifier;
+   int publicModifier; // These modifiers are out of 1000. 1000 -> x1, 500 -> x0.5, 2250 -> x2.25
    int mediaModifier;
    int covertModifier;
 
@@ -61,15 +62,11 @@ class Location
       std::list <int> tick(); //Reduces the duration of modifiers, and returns expired modifiers.           | TODO: Do tick things later.
 
       bool addModifier(int modifier, int duration); //Adds a modifier if it doesn't already exist, or is 0. | Complete
-      void removeModifier(int modifier); //Removes a modifier, with no record of it existing.               | Complete
+      bool removeModifier(int modifier); //Removes a modifier, with no record of it existing.               | Complete
       void setModifier(int modifier, int duration); //Overwrites.                                           | Complete
 
 
       bool addDevice(Device newDevice); //Adds the passed device to the location.                           | Complete (for now)
-
-
-
-
 
 
    protected:
