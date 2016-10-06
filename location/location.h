@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <list>
+#include <vector>
 #include <stdexcept>
 
 #include "Device.h"
@@ -24,11 +25,11 @@
 // 1000 is base value, 0 is no risk, etc.
 struct riskModifiers
 {
-   int publicModifier; // These modifiers are out of 1000. 1000 -> x1, 500 -> x0.5, 2250 -> x2.25
-   int mediaModifier;
-   int covertModifier;
+   unsigned int publicModifier; // These modifiers are out of 1000. 1000 -> x1, 500 -> x0.5, 2250 -> x2.25
+   unsigned int mediaModifier;
+   unsigned int covertModifier;
 
-   int risk; //The risk of being detected, multiplied by 10000. (12 = 0.12%)
+   unsigned int risk; //The risk of being detected, multiplied by 10000. (12 = 0.12%)
 };
 
 
@@ -63,6 +64,7 @@ class Location
 
       bool addModifier(int modifier, int duration); //Adds a modifier if it doesn't already exist, or is 0. | Complete
       bool removeModifier(int modifier); //Removes a modifier, with no record of it existing.               | Complete
+      bool removeModifier(std::map <int, int>::iterator it); //Removes a modifier.                          | Complete
       void setModifier(int modifier, int duration); //Overwrites.                                           | Complete
 
 

@@ -79,11 +79,13 @@ Location::~Location()
 
    int Location::getModifier(int modifier)
    {
-      try
+
+      std::map <int, int>::iterator it = localEffects.find(modifier);
+      if (it != localEffects.end())
       {
          return localEffects.at(modifier);
       }
-      catch(const std::out_of_range& oor)
+      else
       {
          return MODIFIER_NOT_INITIALIZED;
       }
@@ -116,21 +118,28 @@ Location::~Location()
 
    std::list <int> Location::tick()
    {
-      //There are other things to do in this.
+      //There are lots of things to do in this. There may be more to do here.
 
+      std::list <int> decayedModifiers;
 
+      //Finds decayed modifiers and marks them. Reduces the value of modifiers which are greater than 0.
+      for (auto &iter : localEffects){
+         if (iter.second == 0){
+            decayedModifiers.push_front(iter.first);
+         }
+         //Reduces modifiers
+         if (iter.second > 0){ iter.second -= 1; }
+      }
 
       //Removes decayed modifiers.
-      for (auto const &iter : localEffects){
-         if (iter.second == 0){
-            removeModifier(iter.first);
-         }
+      std::list<int>::const_iterator listIterator;
+      for (listIterator = decayedModifiers.begin(); listIterator != decayedModifiers.end(); ++listIterator) {
+         removeModifier(*listIterator);
       }
 
-      //Reduces modifiers
-      for (auto iter:localEffects){
-         if (iter.second != -1){ iter.second -= 1; }
-      }
+
+
+      return decayedModifiers;
    }
 
 
@@ -150,6 +159,16 @@ Location::~Location()
    bool Location::removeModifier(int modifier)
    {
       std::map <int, int>::iterator it = localEffects.find(modifier);
+      if (it != localEffects.end()){
+         localEffects.erase(it);
+         return true;
+      }
+      return false;
+   }
+
+   //Removes a modifier when given an iterator which is in the map.
+   bool Location::removeModifier(std::map <int, int>::iterator it)
+   {
       if (it != localEffects.end()){
          localEffects.erase(it);
          return true;

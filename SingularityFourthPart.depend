@@ -43,13 +43,14 @@
 	<vector>
 	"location.h"
 
-1467495606 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
+1475683845 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
 	"Location.h"
 
-1473275958 c:\users\admin\documents\github\singularityfourthpart\location\location.h
+1475683893 c:\users\admin\documents\github\singularityfourthpart\location\location.h
 	<string>
 	<map>
 	<list>
+	<vector>
 	<stdexcept>
 	"Device.h"
 
