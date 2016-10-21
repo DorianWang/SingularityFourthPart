@@ -22,6 +22,14 @@ int main()
 
    std::cout << testLocation.getBaseCost() << " " << testLocation.getBaseCycles() << std::endl;
 
+   std::cout << testLocation.getBaseUpkeep() << " " << testLocation.getBaseCycles() << std::endl;
+
+   std::cout << testLocation.getModifier(0) << " " << testLocation.getModifier(1) << std::endl;
+
+   std::cout << testLocation.getTotalSize() << " " << testLocation.getNumEmptySpaces() << std::endl;
+
+   //std::cout << testLocation.getBaseCost() << " " << testLocation.getBaseCycles() << std::endl;
+
    //std::cout << "Hello world!" << std::endl;
    return 0;
 
