@@ -30,7 +30,7 @@ int main()
 
    //std::cout << testLocation.getBaseCost() << " " << testLocation.getBaseCycles() << std::endl;
 
-   //std::cout << "Hello world!" << std::endl;
+   std::cout << "Hello world!" << std::endl;
    return 0;
 
 }

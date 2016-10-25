@@ -50,7 +50,8 @@ Location::~Location()
       return numCycles;
    }
 
-
+   //Get Base Values
+   //{
    int Location::getBaseCycles()
    {
       return baseCycles;
@@ -65,6 +66,7 @@ Location::~Location()
    {
       return baseUpkeep;
    }
+   //}
 
 
    int Location::getTotalSize()
