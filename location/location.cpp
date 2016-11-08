@@ -193,6 +193,13 @@ Location::~Location()
       return false;
    }
 
+   bool Location::removeDevice(int deviceType)
+   {
+      if (isBuildable && (containedDevices.size() > 0)){
+         containedDevices.f
+      }
+   }
+
    //}
 
 

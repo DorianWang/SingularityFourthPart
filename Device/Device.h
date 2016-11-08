@@ -18,8 +18,10 @@ class Device
       int baseUpkeep; //Base amount of money required for device operation.
 
       int deviceType; //This is the device type. Used to interact to modifiers and other devices.
+                     //Devices can have the same type, but never the same ID. Unique devices will have unique types.
 
-      //int
+      unsigned long long deviceID; //This specific device's ID. Each one has a unique ID, which is not recycled
+                           // This does mean that eventually it will run out of IDs, but it has at least 3 billion, so...
 
 
 
