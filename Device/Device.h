@@ -6,9 +6,18 @@ class Device
 {
    public:
       Device();
-      virtual ~Device();
-      Device(const Device& other);
+      ~Device();
+      Device(const Device& copyDevice);
 
+      int getBaseCost();
+      int getbaseCycles();;
+      int getbaseUpkeep();;;
+      riskModifiers getBaseRisk();
+
+      int getCost();
+      int getCycles();;
+      int getUpkeep();
+      riskModifiers getRisk();
 
    protected:
    private:

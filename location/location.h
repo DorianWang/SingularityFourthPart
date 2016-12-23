@@ -58,6 +58,11 @@ class Location
                                      //Returns MODIFIER_NOT_INITIALIZED if the modifier is not initialized.
       bool hasActiveModifier(int modifier); //Returns true if modifier exist and is -1 or above 0.          | Complete
 
+      Device getDevice(int DeviceID); //Gets the device with the exact ID                                   | TODO
+
+      std::list <Device> getDevices(int DeviceType); //Gets all devices with the same type.                 | TODO
+
+
 
       void recalculate(); //Recalculates the risk, cycles and cost of the location.                         | TODO: Do things with this...
       std::list <int> tick(); //Reduces the duration of modifiers, and returns expired modifiers.           | TODO: Do tick things later.
@@ -69,6 +74,10 @@ class Location
 
 
       bool addDevice(Device newDevice); //Adds the passed device to the location.                           | Complete (for now)
+
+      bool removeDevice (int DeviceID); // Removes the specific Device.                                     | TODO
+      int removeDevices (int DeviceType); // Removes all devices with the same type.                        | TODO
+      std::vector <bool> removeDevies (std::vector <int> DeviceTypes); //Calls remove for each one.          | TODO
 
 
    protected:
