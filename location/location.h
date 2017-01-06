@@ -21,16 +21,7 @@
 
 #define MODIFIER_NOT_INITIALIZED -2
 
-//Modifiers for the three types of risk.
-// 1000 is base value, 0 is no risk, etc.
-struct riskModifiers
-{
-   unsigned int publicModifier; // These modifiers are out of 1000. 1000 -> x1, 500 -> x0.5, 2250 -> x2.25
-   unsigned int mediaModifier;
-   unsigned int covertModifier;
 
-   unsigned int risk; //The risk of being detected, multiplied by 10000. (12 = 0.12%)
-};
 
 
 
@@ -75,9 +66,9 @@ class Location
 
       bool addDevice(Device newDevice); //Adds the passed device to the location.                           | Complete (for now)
 
-      bool removeDevice (int DeviceID); // Removes the specific Device.                                     | TODO
+      bool removeDevice (unsigned long long DeviceID); // Removes the specific Device.                                     | TODO
       int removeDevices (int DeviceType); // Removes all devices with the same type.                        | TODO
-      std::vector <bool> removeDevies (std::vector <int> DeviceTypes); //Calls remove for each one.          | TODO
+      std::vector <bool> removeDevies (std::vector <int> DeviceTypes); //Calls remove for each one.         | TODO
 
 
    protected:
@@ -87,13 +78,16 @@ class Location
       int baseCycles; //Base number of cycles the location provides. Does not change normally.
       int baseUpkeep; //Base amount of money required for location operation.
 
-      bool isBuildable; //If true, allows adding devices to the location.
+      bool isBuildable; //If true, allows adding or removing devices to the location.
       unsigned int totalSize; //The amount of building spots. If not buildable, it will still affect the description.
 
       int totalCost; //Total cost of the location. Takes into account improvements and such.
       int numCycles; //Number of cycles the location provides.
 
       riskModifiers locationRiskModifiers; //Risk modifiers.
+
+      riskModifiers baseDiscoveryValue; //Base amount of Discovery this location causes, more mundane locations
+                                    // cause less Discovery.
 
       std::map <int, int> localEffects; //These are the modifiers on the location, and the duration.
 

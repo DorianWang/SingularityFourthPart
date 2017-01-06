@@ -193,11 +193,17 @@ Location::~Location()
       return false;
    }
 
-   bool Location::removeDevice(int deviceType)
+   bool Location::removeDevice(unsigned long long deviceID)
    {
       if (isBuildable && (containedDevices.size() > 0)){
-         containedDevices.f
+
+      for (int i = 0; i < containedDevices.size(); i++){
+         if (iter.getDeviceID() == deviceID){
+            containedDevices.erase(iter);
+            return true;
+         }
       }
+      return false;
    }
 
    //}

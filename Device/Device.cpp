@@ -20,11 +20,26 @@ Device::Device(const Device& other)
 
 int Device::getBaseCost()
 {
-   return baseCost
+   return baseCost;
 }
-int Device::getbaseCycles();;
-int Device::getbaseUpkeep();;;
-riskModifiers Device::getBaseRisk();
+int Device::getbaseCycles()
+{
+   return baseCycles;
+}
+int Device::getbaseUpkeep()
+{
+   return baseUpkeep;
+}
+
+riskModifiers Device::getBaseRisk()
+{
+   return baseRisk;
+}
+
+unsigned long long Device::getDeviceID()
+{
+   return deviceID;
+}
 
 
 //}
@@ -33,10 +48,24 @@ riskModifiers Device::getBaseRisk();
 //Getters
 //{
 
-int Device::getCost();
-int Device::getCycles();;
-int Device::getUpkeep();
-riskModifiers Device::getRisk();
+int Device::getCost()
+{
+   return baseCost;
+}
+int Device::getCycles()
+{
+   return baseCycles;
+}
+
+int Device::getUpkeep()
+{
+   return baseUpkeep;
+}
+
+riskModifiers Device::getRisk()
+{
+   return baseRisk;
+}
 
 //}
 
