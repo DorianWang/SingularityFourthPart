@@ -45,6 +45,8 @@
 		<Unit filename="Device/Device.h" />
 		<Unit filename="MainLoop/MainLoop.cpp" />
 		<Unit filename="MainLoop/MainLoop.h" />
+		<Unit filename="ModiferManager.cpp" />
+		<Unit filename="ModiferManager.h" />
 		<Unit filename="locationMap/locationMap.cpp" />
 		<Unit filename="locationMap/locationMap.h" />
 		<Unit filename="location/location.cpp" />
