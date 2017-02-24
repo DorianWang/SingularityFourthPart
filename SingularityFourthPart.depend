@@ -13,33 +13,37 @@
 	<cstring>
 	<map>
 
-1467862632 source:d:\dorian's programs\singularityfourthpart\main.cpp
+1477447453 source:d:\dorian's programs\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
+	"location.h"
 
-1466389472 d:\dorian's programs\singularityfourthpart\statestorage.h
+1466385872 d:\dorian's programs\singularityfourthpart\statestorage.h
 	<cstdio>
 	<cstring>
 	<map>
 
-1464835563 source:d:\dorian's programs\singularityfourthpart\mainloop\mainloop.cpp
+1464831963 source:d:\dorian's programs\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
 
-1464835563 d:\dorian's programs\singularityfourthpart\mainloop\mainloop.h
+1464831963 d:\dorian's programs\singularityfourthpart\mainloop\mainloop.h
 
-1469048885 source:d:\dorian's programs\singularityfourthpart\location\location.cpp
+1477447453 source:d:\dorian's programs\singularityfourthpart\location\location.cpp
 	"Location.h"
 
-1469401204 d:\dorian's programs\singularityfourthpart\location\location.h
+1487727557 d:\dorian's programs\singularityfourthpart\location\location.h
 	<string>
 	<map>
 	<list>
+	<vector>
+	<stdexcept>
 	"Device.h"
+	"../structs.h"
 
-1464835563 source:d:\dorian's programs\singularityfourthpart\locationmap\locationmap.cpp
+1464831963 source:d:\dorian's programs\singularityfourthpart\locationmap\locationmap.cpp
 	"locationMap.h"
 
-1467651920 d:\dorian's programs\singularityfourthpart\locationmap\locationmap.h
+1487727553 d:\dorian's programs\singularityfourthpart\locationmap\locationmap.h
 	<vector>
 	"location.h"
 
@@ -54,10 +58,10 @@
 	<stdexcept>
 	"Device.h"
 
-1468207046 source:d:\dorian's programs\singularityfourthpart\device\device.cpp
+1468203446 source:d:\dorian's programs\singularityfourthpart\device\device.cpp
 	"Device.h"
 
-1469064702 d:\dorian's programs\singularityfourthpart\device\device.h
+1469061102 d:\dorian's programs\singularityfourthpart\device\device.h
 
 1466439308 source:c:\users\admin\documents\github\singularityfourthpart\locationmap\locationmap.cpp
 	"locationMap.h"
@@ -70,4 +74,12 @@
 
 1471533786 source:c:\users\admin\documents\github\singularityfourthpart\device\device.cpp
 	"Device.h"
+
+1487726769 source:d:\dorian's programs\singularityfourthpart\modifier.cpp
+	"Modifier.h"
+
+1487728282 d:\dorian's programs\singularityfourthpart\modifier.h
+	"structs.h"
+
+1487727527 d:\dorian's programs\singularityfourthpart\structs.h
 

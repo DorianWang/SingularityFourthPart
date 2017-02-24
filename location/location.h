@@ -8,6 +8,7 @@
 #include <stdexcept>
 
 #include "Device.h"
+#include "../structs.h"
 
 
 #define TINY_LOCATION 2
@@ -21,16 +22,7 @@
 
 #define MODIFIER_NOT_INITIALIZED -2
 
-//Modifiers for the three types of risk.
-// 1000 is base value, 0 is no risk, etc.
-struct riskModifiers
-{
-   unsigned int publicModifier; // These modifiers are out of 1000. 1000 -> x1, 500 -> x0.5, 2250 -> x2.25
-   unsigned int mediaModifier;
-   unsigned int covertModifier;
 
-   unsigned int risk; //The risk of being detected, multiplied by 10000. (12 = 0.12%)
-};
 
 
 
