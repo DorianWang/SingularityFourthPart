@@ -50,6 +50,11 @@ class Location
                                      //Returns MODIFIER_NOT_INITIALIZED if the modifier is not initialized.
       bool hasActiveModifier(int modifier); //Returns true if modifier exist and is -1 or above 0.          | Complete
 
+      Device getDevice(int DeviceID); //Gets the device with the exact ID                                   | TODO
+
+      std::list <Device> getDevices(int DeviceType); //Gets all devices with the same type.                 | TODO
+
+
 
       void recalculate(); //Recalculates the risk, cycles and cost of the location.                         | TODO: Do things with this...
       std::list <int> tick(); //Reduces the duration of modifiers, and returns expired modifiers.           | TODO: Do tick things later.
@@ -62,6 +67,10 @@ class Location
 
       bool addDevice(Device newDevice); //Adds the passed device to the location.                           | Complete (for now)
 
+      bool removeDevice (unsigned long long DeviceID); // Removes the specific Device.                      | TODO
+      int removeDevices (int DeviceType); // Removes all devices with the same type.                        | TODO
+      std::vector <bool> removeDevies (std::vector <int> DeviceTypes); //Calls remove for each one.         | TODO
+
 
    protected:
    private:
@@ -70,13 +79,16 @@ class Location
       int baseCycles; //Base number of cycles the location provides. Does not change normally.
       int baseUpkeep; //Base amount of money required for location operation.
 
-      bool isBuildable; //If true, allows adding devices to the location.
+      bool isBuildable; //If true, allows adding or removing devices to the location.
       unsigned int totalSize; //The amount of building spots. If not buildable, it will still affect the description.
 
       int totalCost; //Total cost of the location. Takes into account improvements and such.
       int numCycles; //Number of cycles the location provides.
 
       riskModifiers locationRiskModifiers; //Risk modifiers.
+
+      riskModifiers baseDiscoveryValue; //Base amount of Discovery this location causes, more mundane locations
+                                    // cause less Discovery.
 
       std::map <int, int> localEffects; //These are the modifiers on the location, and the duration.
 

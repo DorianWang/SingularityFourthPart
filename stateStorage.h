@@ -20,6 +20,21 @@ typedef struct mouseInfo
    int clickType;
 };
 
+
+typedef struct modifierTemplate
+{
+   int modifierID; //TODO
+   std::vector <int> effects;
+
+
+
+
+   bool hasRiskEffects;
+};
+
+
+
+
 /*
 typedef struct globalEffect
 {
