@@ -24,7 +24,7 @@ typedef struct mouseInfo
 typedef struct modifierTemplate
 {
    int modifierID; //TODO
-   std::vector <int> effects;
+   int* effects;
 
 
 
