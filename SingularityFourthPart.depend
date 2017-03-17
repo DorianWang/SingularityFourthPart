@@ -1,14 +1,15 @@
 # depslib dependency file v1.0
-1471533786 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
+1478813049 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
+	"location.h"
 
-1466435708 source:c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.cpp
+1466439308 source:c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
 
-1466435708 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
+1466439308 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
 
-1466439312 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
+1488209803 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
 	<cstdio>
 	<cstring>
 	<map>
@@ -47,32 +48,34 @@
 	<vector>
 	"location.h"
 
-1475683845 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
+1489518508 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
 	"Location.h"
 
-1482719103 c:\users\admin\documents\github\singularityfourthpart\location\location.h
+1488209802 c:\users\admin\documents\github\singularityfourthpart\location\location.h
 	<string>
 	<map>
 	<list>
 	<vector>
 	<stdexcept>
 	"Device.h"
+	"../structs.h"
 
 1468203446 source:d:\dorian's programs\singularityfourthpart\device\device.cpp
 	"Device.h"
 
 1469061102 d:\dorian's programs\singularityfourthpart\device\device.h
 
-1466435708 source:c:\users\admin\documents\github\singularityfourthpart\locationmap\locationmap.cpp
+1466439308 source:c:\users\admin\documents\github\singularityfourthpart\locationmap\locationmap.cpp
 	"locationMap.h"
 
-1473269754 c:\users\admin\documents\github\singularityfourthpart\locationmap\locationmap.h
+1473273354 c:\users\admin\documents\github\singularityfourthpart\locationmap\locationmap.h
 	<vector>
 	"location.h"
 
-1482719128 c:\users\admin\documents\github\singularityfourthpart\device\device.h
+1489518069 c:\users\admin\documents\github\singularityfourthpart\device\device.h
+	"../structs.h"
 
-1482719217 source:c:\users\admin\documents\github\singularityfourthpart\device\device.cpp
+1482722817 source:c:\users\admin\documents\github\singularityfourthpart\device\device.cpp
 	"Device.h"
 
 1487726769 source:d:\dorian's programs\singularityfourthpart\modifier.cpp
@@ -82,4 +85,19 @@
 	"structs.h"
 
 1487727527 d:\dorian's programs\singularityfourthpart\structs.h
+
+1488209802 c:\users\admin\documents\github\singularityfourthpart\structs.h
+
+1489771588 source:c:\users\admin\documents\github\singularityfourthpart\conditional.cpp
+	"Conditional.h"
+
+1489773015 c:\users\admin\documents\github\singularityfourthpart\conditional.h
+	"Modifier.h"
+	<vector>
+
+1489173518 c:\users\admin\documents\github\singularityfourthpart\modifier.h
+	"structs.h"
+
+1488209802 source:c:\users\admin\documents\github\singularityfourthpart\modifier.cpp
+	"Modifier.h"
 

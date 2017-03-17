@@ -196,12 +196,14 @@ Location::~Location()
    bool Location::removeDevice(unsigned long long deviceID)
    {
       if (isBuildable && (containedDevices.size() > 0)){
-
-      for (int i = 0; i < containedDevices.size(); i++){
-         if (iter.getDeviceID() == deviceID){
-            containedDevices.erase(iter);
-            return true;
+         std::list <Device>::iterator iter = containedDevices.begin();
+         while(iter != containedDevices.end()){
+            if ((*iter).getDeviceID() == deviceID){
+               containedDevices.erase(iter++);
+               return true;
+            }
          }
+         return false;
       }
       return false;
    }

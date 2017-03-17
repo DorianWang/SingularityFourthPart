@@ -41,6 +41,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Conditional.cpp" />
+		<Unit filename="Conditional.h" />
 		<Unit filename="Device/Device.cpp" />
 		<Unit filename="Device/Device.h" />
 		<Unit filename="MainLoop/MainLoop.cpp" />

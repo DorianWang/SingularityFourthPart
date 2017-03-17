@@ -8,16 +8,17 @@ class Modifier
 {
    protected:
       unsigned long long modifierId;
+      long long remainingDuration;
 
    public:
       Modifier();
       virtual ~Modifier();
 
-      unsigned unsigned int getID(){ return modifierId; };
+      unsigned long long getID(){ return modifierId; };
       virtual riskModifiers getRiskModifiers() = 0;
       virtual unsigned int getTags() = 0;
       virtual unsigned int getCostScaling() = 0;
-      virtual unsigned int
+      virtual unsigned int getDuration() = 0;
 
 
 
