@@ -99,9 +99,12 @@ template <typename T> bool Conditional<T>::checkConditional()
 
 
 
+template <typename T> void Conditional<T>::addComparedValue()
 
+template <typename T> void Conditional<T>::addWatchedValue(T* watchedValue);
 
-
+      void changeLogicOp(LogicOperators newOp);
+      void changeValueOp(ValueOperators newOp);
 
 
 

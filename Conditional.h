@@ -21,10 +21,16 @@ template <typename T> class Conditional
       virtual ~Conditional();
 
       bool checkConditional();
-      void addConditional();
+      void addConditional(Conditional newConditional);
 
       void addLocationModifer(); //TODO: All these functions
       //void addGlobalModifer(Modifier temp);
+
+      void addComparedValue(T newValue);
+      void addWatchedValue(T* watchedValue);
+
+      void changeLogicOp(LogicOperators newOp);
+      void changeValueOp(ValueOperators newOp);
 
 
 
@@ -34,6 +40,8 @@ template <typename T> class Conditional
 
       LogicOperators currentLogicOP;
       ValueOperators currentValueOp;
+      T comparedValue;
+      T* watchedValue; //This is what is compared with the stored Value.
 
 
 
