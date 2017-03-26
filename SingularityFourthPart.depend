@@ -14,25 +14,25 @@
 	<cstring>
 	<map>
 
-1477447453 source:d:\dorian's programs\singularityfourthpart\main.cpp
+1487970952 source:d:\dorian's programs\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
 	"location.h"
 
-1466385872 d:\dorian's programs\singularityfourthpart\statestorage.h
+1488344222 d:\dorian's programs\singularityfourthpart\statestorage.h
 	<cstdio>
 	<cstring>
 	<map>
 
-1464831963 source:d:\dorian's programs\singularityfourthpart\mainloop\mainloop.cpp
+1464835563 source:d:\dorian's programs\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
 
-1464831963 d:\dorian's programs\singularityfourthpart\mainloop\mainloop.h
+1464835563 d:\dorian's programs\singularityfourthpart\mainloop\mainloop.h
 
-1477447453 source:d:\dorian's programs\singularityfourthpart\location\location.cpp
+1490466504 source:d:\dorian's programs\singularityfourthpart\location\location.cpp
 	"Location.h"
 
-1487727557 d:\dorian's programs\singularityfourthpart\location\location.h
+1487970952 d:\dorian's programs\singularityfourthpart\location\location.h
 	<string>
 	<map>
 	<list>
@@ -41,10 +41,10 @@
 	"Device.h"
 	"../structs.h"
 
-1464831963 source:d:\dorian's programs\singularityfourthpart\locationmap\locationmap.cpp
+1464835563 source:d:\dorian's programs\singularityfourthpart\locationmap\locationmap.cpp
 	"locationMap.h"
 
-1487727553 d:\dorian's programs\singularityfourthpart\locationmap\locationmap.h
+1487731153 d:\dorian's programs\singularityfourthpart\locationmap\locationmap.h
 	<vector>
 	"location.h"
 
@@ -60,10 +60,11 @@
 	"Device.h"
 	"../structs.h"
 
-1468203446 source:d:\dorian's programs\singularityfourthpart\device\device.cpp
+1487970952 source:d:\dorian's programs\singularityfourthpart\device\device.cpp
 	"Device.h"
 
-1469061102 d:\dorian's programs\singularityfourthpart\device\device.h
+1490466503 d:\dorian's programs\singularityfourthpart\device\device.h
+	"../structs.h"
 
 1466439308 source:c:\users\admin\documents\github\singularityfourthpart\locationmap\locationmap.cpp
 	"locationMap.h"
@@ -78,13 +79,13 @@
 1482722817 source:c:\users\admin\documents\github\singularityfourthpart\device\device.cpp
 	"Device.h"
 
-1487726769 source:d:\dorian's programs\singularityfourthpart\modifier.cpp
+1487970951 source:d:\dorian's programs\singularityfourthpart\modifier.cpp
 	"Modifier.h"
 
-1487728282 d:\dorian's programs\singularityfourthpart\modifier.h
+1490466503 d:\dorian's programs\singularityfourthpart\modifier.h
 	"structs.h"
 
-1487727527 d:\dorian's programs\singularityfourthpart\structs.h
+1487970951 d:\dorian's programs\singularityfourthpart\structs.h
 
 1488209802 c:\users\admin\documents\github\singularityfourthpart\structs.h
 

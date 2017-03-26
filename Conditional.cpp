@@ -17,15 +17,6 @@ template <typename T> bool Conditional<T>::checkConditional()
    int counter = 0;
    switch (currentLogicOP){
 
-   case (NOT):
-      for (int i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == true){
-            return false;
-         }
-      }
-      return true;
-      break;
-
    case (AND):
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == false){
@@ -54,6 +45,9 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (NOR):
+      if (evaluate()){
+         return false;
+      }
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             return false;
@@ -97,17 +91,65 @@ template <typename T> bool Conditional<T>::checkConditional()
    return true; //Default result, I might put an exception here.
 }
 
+//enum ValueOperators{NOT_EQUAL, EQUAL, GREATER, LESSER};
+template <typename T> bool Conditional<T>::evaluate()
+{
+   switch (currentLogicOP){
+   case NOT_EQUAL:
+      return (*watchedValue != *comparedValuePointer);
+
+   case EQUAL:
 
 
-template <typename T> void Conditional<T>::addComparedValue()
 
-template <typename T> void Conditional<T>::addWatchedValue(T* watchedValue);
 
-      void changeLogicOp(LogicOperators newOp);
-      void changeValueOp(ValueOperators newOp);
+      break;
+   case GREATER:
 
 
 
 
+      break;
+
+   case LESSER:
+
+
+
+
+      break;
+
+   default:
+      //Set some sort of error...
+
+   }
+}
+
+
+
+//Setters
+//{
+
+template <typename T> void Conditional<T>::addComparedValue(T* newValue)
+{
+   comparedValuePointer = newValue;
+};
+
+template <typename T> void Conditional<T>::addWatchedValue(T* watchedValue)
+{
+   this.watchedValue = watchedValue;
+};
+
+template <typename T> void Conditional<T>::changeLogicOp(LogicOperators newOp)
+{
+   currentLogicOP = newOp;
+}
+template <typename T> void Conditional<T>::changeValueOp(ValueOperators newOp)
+{
+   currentValueOp = newOp;
+}
+
+
+//}
+//End Setters
 
 
