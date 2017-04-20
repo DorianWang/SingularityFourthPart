@@ -41,6 +41,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Bug.cpp" />
+		<Unit filename="Bug.h" />
 		<Unit filename="Conditional.cpp" />
 		<Unit filename="Conditional.h" />
 		<Unit filename="Device/Device.cpp" />
@@ -49,6 +51,8 @@
 		<Unit filename="MainLoop/MainLoop.h" />
 		<Unit filename="Modifier.cpp" />
 		<Unit filename="Modifier.h" />
+		<Unit filename="Software.cpp" />
+		<Unit filename="Software.h" />
 		<Unit filename="locationMap/locationMap.cpp" />
 		<Unit filename="locationMap/locationMap.h" />
 		<Unit filename="location/location.cpp" />
