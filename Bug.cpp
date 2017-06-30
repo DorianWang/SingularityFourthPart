@@ -10,7 +10,7 @@ Bug::Bug(int aproxSeverity)
 {
    int weights[BUG_TYPE_NUMBER] = {0}; //All bug chances start at 0.
    if (aproxSeverity == 0){
-      weights[BUG_BAD_DESIGN] = 50
+      weights[BUG_BAD_DESIGN] = 50;
    }
    else if (aproxSeverity < 2){
 

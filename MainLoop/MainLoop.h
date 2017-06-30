@@ -1,6 +1,12 @@
 #ifndef MAINLOOP_H
 #define MAINLOOP_H
 
+#include "stateStorage.h"
+
+
+#define PAUSE_KEY p
+//Will be changed later
+#define EXIT_KEY q
 
 class MainLoop
 {

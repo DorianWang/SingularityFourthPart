@@ -18,7 +18,23 @@ MainLoop::~MainLoop()
 
 int MainLoop::gameLoop()
 {
-   return 0;
+   bool isPaused = false;
+   while (true){
+      if (isPaused == false){
+         //Time tick everything that ticks
+      }
+      if (stateInfo.getKeyboard()[PAUSE_KEY] == true){
+         isPaused = true;
+      }
+
+      else if (stateInfo.getKeyboard()[EXIT_KEY] == true){
+         isPaused = true;
+      }
+      else {;}
+
+
+
+   }
 }
 
 

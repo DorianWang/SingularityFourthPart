@@ -60,6 +60,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="stateStorage.h" />
 		<Unit filename="structs.h" />
+		<Unit filename="tickable.cpp" />
+		<Unit filename="tickable.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

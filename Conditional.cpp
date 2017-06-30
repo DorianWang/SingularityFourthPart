@@ -99,7 +99,7 @@ template <typename T> bool Conditional<T>::evaluate()
       return (*watchedValue != *comparedValuePointer);
 
    case EQUAL:
-
+      return (*watchedValue == *comparedValuePointer)
 
 
 
