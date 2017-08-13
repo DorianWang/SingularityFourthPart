@@ -15,9 +15,11 @@ template <typename T> Conditional<T>::~Conditional()
 template <typename T> bool Conditional<T>::checkConditional()
 {
    int counter = 0;
+   if (evaluate()) counter++;
    switch (currentLogicOP){
 
    case (AND):
+      if (counter == 0) return false;
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == false){
             return false;
@@ -27,6 +29,7 @@ template <typename T> bool Conditional<T>::checkConditional()
       break;
 
    case (NAND):
+      if (counter == 0) return true;
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == false){
             return true;
@@ -36,6 +39,7 @@ template <typename T> bool Conditional<T>::checkConditional()
       break;
 
    case (OR):
+      if (counter == 1) return true;
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             return true;
@@ -45,9 +49,7 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (NOR):
-      if (evaluate()){
-         return false;
-      }
+      if (counter == 1) return false;
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             return false;
@@ -57,7 +59,6 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (XOR):
-      counter = 0;
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             counter++;
@@ -67,23 +68,21 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (MAJOR):
-      counter = 0;
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             counter++;
          }
       }
-      if (counter > (Conditionals.size() / 2)) return true;
+      if (counter > ((Conditionals.size() + 1) / 2)) return true;
    break;
 
    case (MINOR):
-      counter = 0;
       for (int i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             counter++;
          }
       }
-      if (counter < ((Conditionals.size()+1) / 2)) return true;
+      if (counter < (((Conditionals.size() + 1) / 2) + 1) ) return true;
    break;
 
    };
@@ -99,24 +98,13 @@ template <typename T> bool Conditional<T>::evaluate()
       return (*watchedValue != *comparedValuePointer);
 
    case EQUAL:
-      return (*watchedValue == *comparedValuePointer)
+      return (*watchedValue == *comparedValuePointer);
 
-
-
-      break;
    case GREATER:
-
-
-
-
-      break;
+      return (*watchedValue > *comparedValuePointer);
 
    case LESSER:
-
-
-
-
-      break;
+      return (*watchedValue < *comparedValuePointer);
 
    default:
       //Set some sort of error...
