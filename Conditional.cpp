@@ -117,6 +117,8 @@ template <typename T> bool Conditional<T>::evaluate()
 //Setters
 //{
 
+template <typename T> void Conditional<T>::add
+
 template <typename T> void Conditional<T>::addComparedValue(T* newValue)
 {
    comparedValuePointer = newValue;

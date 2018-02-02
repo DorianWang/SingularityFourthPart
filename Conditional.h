@@ -21,7 +21,7 @@ template <typename T> class Conditional
       virtual ~Conditional();
 
       bool checkConditional();
-      void addConditional(Conditional newConditional);
+      void addConditional(Conditional* newConditional);
 
       void addLocationModifer(); //TODO: All these functions
       //void addGlobalModifer(Modifier temp);
