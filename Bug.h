@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 
-#define BUG_TYPE_NUMBER 8
-enum bugTypes {BUG_OVERFLOW, BUG_UNDERFLOW, BUG_OVERREAD, BUG_UNSANITIZED_INPUT, BUG_RACE_CONDITION,
-                  BUG_LOGIC_ERROR, BUG_BAD_DESIGN, BUG_BACKDOOR}; //Maybe more flavour?
+#define BUG_TYPE_NUMBER 9
+//Organized from less to more serious. It is possible to have a high severity "bad design", and a low severity back door
+enum bugTypes {BUG_FUNCTIONALITY, BUG_MEMORY_ERROR, BUG_LOGIC_ERROR}; //Maybe more flavour?
 enum Severity {SEV_SOLVED, SEV_BENIGN, SEV_LOW, SEV_MEDIUM, SEV_HIGH, SEV_CRITICAL};
 
 class Bug

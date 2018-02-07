@@ -45,6 +45,8 @@
 		<Unit filename="Bug.h" />
 		<Unit filename="Conditional.cpp" />
 		<Unit filename="Conditional.h" />
+		<Unit filename="ConditionalBase.cpp" />
+		<Unit filename="ConditionalBase.h" />
 		<Unit filename="ConditionalManager.cpp" />
 		<Unit filename="ConditionalManager.h" />
 		<Unit filename="Device/Device.cpp" />

@@ -31,6 +31,8 @@ int main()
 
    //std::cout << testLocation.getBaseCost() << " " << testLocation.getBaseCycles() << std::endl;
 
+   Conditional testConditional
+
    std::cout << "Hello world!" << std::endl;
    return 0;
 

@@ -12,7 +12,7 @@ enum LogicOperators{AND, NAND, OR, NOR, XOR, MAJOR, MINOR};
 enum ValueOperators{NOT_EQUAL, EQUAL, GREATER, LESSER};
 
 
-template <typename T> class Conditional
+template <typename T> class Conditional : public ConditionalBase
 {
    public:
       /** Default constructor */
@@ -21,7 +21,7 @@ template <typename T> class Conditional
       virtual ~Conditional();
 
       bool checkConditional();
-      void addConditional(Conditional* newConditional);
+      void addConditional(ConditionalBase* newConditional);
 
       void addLocationModifer(); //TODO: All these functions
       //void addGlobalModifer(Modifier temp);
