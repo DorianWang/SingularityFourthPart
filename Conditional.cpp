@@ -153,6 +153,6 @@ template class Conditional<short>;
 template class Conditional<char>;
 template class Conditional<long long int>;
 template class Conditional<bool>; //Well, I guess...
-
+//Because the class uses primitives, not equals will not work for floats.
 
 
