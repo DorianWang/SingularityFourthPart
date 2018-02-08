@@ -8,6 +8,7 @@
 #include "stateStorage.h"
 
 #include "location.h"
+#include "Conditional.h"
 
 //using namespace std;
 
@@ -31,7 +32,7 @@ int main()
 
    //std::cout << testLocation.getBaseCost() << " " << testLocation.getBaseCycles() << std::endl;
 
-   Conditional testConditional
+   Conditional <int> testConditional;
 
    std::cout << "Hello world!" << std::endl;
    return 0;

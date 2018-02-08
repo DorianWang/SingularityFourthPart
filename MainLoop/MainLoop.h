@@ -1,7 +1,7 @@
 #ifndef MAINLOOP_H
 #define MAINLOOP_H
 
-#include "stateStorage.h"
+//#include "stateStorage.h"
 
 
 #define PAUSE_KEY p

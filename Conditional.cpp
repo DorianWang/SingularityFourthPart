@@ -14,13 +14,13 @@ template <typename T> Conditional<T>::~Conditional()
 //enum LogicOperators(AND, NAND, OR, NOR, XOR, MAJOR, MINOR)
 template <typename T> bool Conditional<T>::checkConditional()
 {
-   int counter = 0;
+   unsigned int counter = 0; unsigned int i = 0;
    if (evaluate()) counter++;
-   switch (currentLogicOP){
+   switch (this -> currentLogicOP){
 
    case (AND):
       if (counter == 0) return false;
-      for (int i = 0; i < Conditionals.size(); i++){
+      for (i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == false){
             return false;
          }
@@ -30,7 +30,7 @@ template <typename T> bool Conditional<T>::checkConditional()
 
    case (NAND):
       if (counter == 0) return true;
-      for (int i = 0; i < Conditionals.size(); i++){
+      for (i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == false){
             return true;
          }
@@ -40,7 +40,7 @@ template <typename T> bool Conditional<T>::checkConditional()
 
    case (OR):
       if (counter == 1) return true;
-      for (int i = 0; i < Conditionals.size(); i++){
+      for (i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             return true;
          }
@@ -50,7 +50,7 @@ template <typename T> bool Conditional<T>::checkConditional()
 
    case (NOR):
       if (counter == 1) return false;
-      for (int i = 0; i < Conditionals.size(); i++){
+      for (i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             return false;
          }
@@ -59,7 +59,7 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (XOR):
-      for (int i = 0; i < Conditionals.size(); i++){
+      for (i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             counter++;
          }
@@ -68,7 +68,7 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (MAJOR):
-      for (int i = 0; i < Conditionals.size(); i++){
+      for (i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             counter++;
          }
@@ -77,7 +77,7 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (MINOR):
-      for (int i = 0; i < Conditionals.size(); i++){
+      for (i = 0; i < Conditionals.size(); i++){
          if (Conditionals[i].checkConditional() == true){
             counter++;
          }
@@ -108,7 +108,7 @@ template <typename T> bool Conditional<T>::evaluate()
 
    default:
       //Set some sort of error...
-
+      return false;
    }
 }
 
@@ -117,7 +117,11 @@ template <typename T> bool Conditional<T>::evaluate()
 //Setters
 //{
 
-template <typename T> void Conditional<T>::add
+template <typename T> void Conditional<T>::addConditional(ConditionalBase* newConditional)
+{
+   //TODO: Make this work properly
+   return;
+}
 
 template <typename T> void Conditional<T>::addComparedValue(T* newValue)
 {
@@ -126,7 +130,7 @@ template <typename T> void Conditional<T>::addComparedValue(T* newValue)
 
 template <typename T> void Conditional<T>::addWatchedValue(T* watchedValue)
 {
-   this.watchedValue = watchedValue;
+   this -> watchedValue = watchedValue;
 };
 
 template <typename T> void Conditional<T>::changeLogicOp(LogicOperators newOp)
@@ -141,5 +145,14 @@ template <typename T> void Conditional<T>::changeValueOp(ValueOperators newOp)
 
 //}
 //End Setters
+
+template class Conditional<int>;
+template class Conditional<float>;
+template class Conditional<double>;
+template class Conditional<short>;
+template class Conditional<char>;
+template class Conditional<long long int>;
+template class Conditional<bool>; //Well, I guess...
+
 
 

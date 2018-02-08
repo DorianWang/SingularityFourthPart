@@ -102,3 +102,94 @@
 1488209802 source:c:\users\admin\documents\github\singularityfourthpart\modifier.cpp
 	"Modifier.h"
 
+1487967352 source:d:\dorians programs\singularityfourthpart\device\device.cpp
+	"Device.h"
+
+1490466503 d:\dorians programs\singularityfourthpart\device\device.h
+	"../structs.h"
+
+1487967351 d:\dorians programs\singularityfourthpart\structs.h
+
+1490466504 source:d:\dorians programs\singularityfourthpart\location\location.cpp
+	"Location.h"
+
+1487967352 d:\dorians programs\singularityfourthpart\location\location.h
+	<string>
+	<map>
+	<list>
+	<vector>
+	<stdexcept>
+	"Device.h"
+	"../structs.h"
+
+1464835563 source:d:\dorians programs\singularityfourthpart\locationmap\locationmap.cpp
+	"locationMap.h"
+
+1487727553 d:\dorians programs\singularityfourthpart\locationmap\locationmap.h
+	<vector>
+	"location.h"
+
+1487967351 source:d:\dorians programs\singularityfourthpart\modifier.cpp
+	"Modifier.h"
+
+1490466503 d:\dorians programs\singularityfourthpart\modifier.h
+	"structs.h"
+
+1518053117 source:d:\dorians programs\singularityfourthpart\bug.cpp
+	"Bug.h"
+
+1518044696 d:\dorians programs\singularityfourthpart\bug.h
+	<string>
+	<stdlib.h>
+
+1518053167 source:d:\dorians programs\singularityfourthpart\conditional.cpp
+	"Conditional.h"
+
+1518046023 d:\dorians programs\singularityfourthpart\conditional.h
+	"Modifier.h"
+	"ConditionalBase.h"
+	<vector>
+
+1518054890 d:\dorians programs\singularityfourthpart\conditionalbase.h
+
+1518044696 source:d:\dorians programs\singularityfourthpart\conditionalbase.cpp
+	"ConditionalBase.h"
+
+1518044696 source:d:\dorians programs\singularityfourthpart\conditionalmanager.cpp
+	"ConditionalManager.h"
+
+1518044696 d:\dorians programs\singularityfourthpart\conditionalmanager.h
+
+1518053282 source:d:\dorians programs\singularityfourthpart\main.cpp
+	<iostream>
+	"stateStorage.h"
+	"location.h"
+	"Conditional.h"
+
+1488340622 d:\dorians programs\singularityfourthpart\statestorage.h
+	<cstdio>
+	<cstring>
+	<map>
+
+1488340622 source:d:\dorians programs\singularityfourthpart\statestorage.h
+	<cstdio>
+	<cstring>
+	<map>
+
+1518053467 source:d:\dorians programs\singularityfourthpart\mainloop\mainloop.cpp
+	"MainLoop.h"
+
+1518053460 d:\dorians programs\singularityfourthpart\mainloop\mainloop.h
+
+1518044689 source:d:\dorians programs\singularityfourthpart\software.cpp
+	"Software.h"
+
+1518053480 d:\dorians programs\singularityfourthpart\software.h
+	"Bug.h"
+	<vector>
+
+1518044690 source:d:\dorians programs\singularityfourthpart\tickable.cpp
+	"tickable.h"
+
+1518044690 d:\dorians programs\singularityfourthpart\tickable.h
+

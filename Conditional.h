@@ -2,14 +2,9 @@
 #define CONDITIONAL_H
 
 #include "Modifier.h"
+#include "ConditionalBase.h"
 #include <vector>
 
-//XOR is # true % 2, MAJOR is at least 50%, MINOR is less than 50%
-//XOR, MAJOR and MINOR has a bit more resource intensive, as they always check every one.
-enum LogicOperators{AND, NAND, OR, NOR, XOR, MAJOR, MINOR};
-
-
-enum ValueOperators{NOT_EQUAL, EQUAL, GREATER, LESSER};
 
 
 template <typename T> class Conditional : public ConditionalBase
@@ -32,16 +27,15 @@ template <typename T> class Conditional : public ConditionalBase
       void changeLogicOp(LogicOperators newOp);
       void changeValueOp(ValueOperators newOp);
 
-      bool evaluate();
+
 
 
 
    protected:
    private:
       std::vector <Conditional> Conditionals;
+      bool evaluate();
 
-      LogicOperators currentLogicOP;
-      ValueOperators currentValueOp;
       //T comparedValue;
       T* watchedValue; //This is what is compared with the stored Value.
       T* comparedValuePointer; //This should point to either a constant, or a "meta" variable. (point it to # of bases, or something)

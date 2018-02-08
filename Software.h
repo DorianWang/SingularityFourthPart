@@ -2,6 +2,7 @@
 #define SOFTWARE_H
 
 #include "Bug.h"
+#include <vector>
 
 class Software
 {
