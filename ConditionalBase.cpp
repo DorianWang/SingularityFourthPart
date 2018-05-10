@@ -1,8 +1,8 @@
 #include "ConditionalBase.h"
 
-ConditionalBase::ConditionalBase()
+ConditionalBase::ConditionalBase(unsigned int newID)
 {
-   //ctor
+   ID = newID;
 }
 
 ConditionalBase::~ConditionalBase()

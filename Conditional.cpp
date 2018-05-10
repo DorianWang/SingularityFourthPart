@@ -1,6 +1,7 @@
 #include "Conditional.h"
 
-template <typename T> Conditional<T>::Conditional()
+template <typename T> Conditional<T>::Conditional(unsigned int newID)
+   : ConditionalBase (newID)
 {
    //ctor
 }
@@ -18,67 +19,67 @@ template <typename T> bool Conditional<T>::checkConditional()
    if (evaluate()) counter++;
    switch (this -> currentLogicOP){
 
-   case (AND):
+   case (conditionalEnums::AND):
       if (counter == 0) return false;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == false){
+         if (Conditionals[i] -> checkConditional() == false){
             return false;
          }
       }
       return true;
       break;
 
-   case (NAND):
+   case (conditionalEnums::NAND):
       if (counter == 0) return true;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == false){
+         if (Conditionals[i] -> checkConditional() == false){
             return true;
          }
       }
       return false;
       break;
 
-   case (OR):
+   case (conditionalEnums::OR):
       if (counter == 1) return true;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == true){
+         if (Conditionals[i] -> checkConditional() == true){
             return true;
          }
       }
       return false;
    break;
 
-   case (NOR):
+   case (conditionalEnums::NOR):
       if (counter == 1) return false;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == true){
+         if (Conditionals[i] -> checkConditional() == true){
             return false;
          }
       }
       return true;
    break;
 
-   case (XOR):
+   case (conditionalEnums::XOR):
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == true){
+         if (Conditionals[i] -> checkConditional() == true){
             counter++;
          }
       }
       if (counter % 2) return true;
    break;
 
-   case (MAJOR):
+   case (conditionalEnums::MAJOR):
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == true){
+         if (Conditionals[i] -> checkConditional() == true){
             counter++;
          }
       }
       if (counter > ((Conditionals.size() + 1) / 2)) return true;
    break;
 
-   case (MINOR):
+   case (conditionalEnums::MINOR):
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i].checkConditional() == true){
+         if (Conditionals[i] -> checkConditional() == true){
             counter++;
          }
       }
@@ -93,17 +94,18 @@ template <typename T> bool Conditional<T>::checkConditional()
 //enum ValueOperators{NOT_EQUAL, EQUAL, GREATER, LESSER};
 template <typename T> bool Conditional<T>::evaluate()
 {
-   switch (currentLogicOP){
-   case NOT_EQUAL:
+   if (watchedValue == NULL || comparedValuePointer == NULL) throw; // Not initialized
+   switch (currentValueOp){
+   case conditionalEnums::NOT_EQUAL:
       return (*watchedValue != *comparedValuePointer);
 
-   case EQUAL:
+   case conditionalEnums::EQUAL:
       return (*watchedValue == *comparedValuePointer);
 
-   case GREATER:
+   case conditionalEnums::GREATER:
       return (*watchedValue > *comparedValuePointer);
 
-   case LESSER:
+   case conditionalEnums::LESSER:
       return (*watchedValue < *comparedValuePointer);
 
    default:
@@ -119,7 +121,7 @@ template <typename T> bool Conditional<T>::evaluate()
 
 template <typename T> void Conditional<T>::addConditional(ConditionalBase* newConditional)
 {
-   //TODO: Make this work properly
+   Conditionals.push_back(newConditional);
    return;
 }
 
@@ -128,16 +130,16 @@ template <typename T> void Conditional<T>::addComparedValue(T* newValue)
    comparedValuePointer = newValue;
 };
 
-template <typename T> void Conditional<T>::addWatchedValue(T* watchedValue)
+template <typename T> void Conditional<T>::addWatchedValue(T* newValue)
 {
-   this -> watchedValue = watchedValue;
+   watchedValue = newValue;
 };
 
-template <typename T> void Conditional<T>::changeLogicOp(LogicOperators newOp)
+template <typename T> void Conditional<T>::changeLogicOp(conditionalEnums::LogicOperators newOp)
 {
    currentLogicOP = newOp;
 }
-template <typename T> void Conditional<T>::changeValueOp(ValueOperators newOp)
+template <typename T> void Conditional<T>::changeValueOp(conditionalEnums::ValueOperators newOp)
 {
    currentValueOp = newOp;
 }
@@ -153,6 +155,6 @@ template class Conditional<short>;
 template class Conditional<char>;
 template class Conditional<long long int>;
 template class Conditional<bool>; //Well, I guess...
-//Because the class uses primitives, not equals will not work for floats.
+//Because the class uses primitives, not equals and equals will not work well for floats.
 
 

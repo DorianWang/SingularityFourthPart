@@ -102,18 +102,18 @@
 1488209802 source:c:\users\admin\documents\github\singularityfourthpart\modifier.cpp
 	"Modifier.h"
 
-1487967352 source:d:\dorians programs\singularityfourthpart\device\device.cpp
+1487970952 source:d:\dorians programs\singularityfourthpart\device\device.cpp
 	"Device.h"
 
-1490466503 d:\dorians programs\singularityfourthpart\device\device.h
+1490470103 d:\dorians programs\singularityfourthpart\device\device.h
 	"../structs.h"
 
-1487967351 d:\dorians programs\singularityfourthpart\structs.h
+1487970951 d:\dorians programs\singularityfourthpart\structs.h
 
-1490466504 source:d:\dorians programs\singularityfourthpart\location\location.cpp
+1490470104 source:d:\dorians programs\singularityfourthpart\location\location.cpp
 	"Location.h"
 
-1487967352 d:\dorians programs\singularityfourthpart\location\location.h
+1487970952 d:\dorians programs\singularityfourthpart\location\location.h
 	<string>
 	<map>
 	<list>
@@ -122,51 +122,52 @@
 	"Device.h"
 	"../structs.h"
 
-1464835563 source:d:\dorians programs\singularityfourthpart\locationmap\locationmap.cpp
+1464839163 source:d:\dorians programs\singularityfourthpart\locationmap\locationmap.cpp
 	"locationMap.h"
 
-1487727553 d:\dorians programs\singularityfourthpart\locationmap\locationmap.h
+1487731153 d:\dorians programs\singularityfourthpart\locationmap\locationmap.h
 	<vector>
 	"location.h"
 
-1487967351 source:d:\dorians programs\singularityfourthpart\modifier.cpp
+1487970951 source:d:\dorians programs\singularityfourthpart\modifier.cpp
 	"Modifier.h"
 
-1490466503 d:\dorians programs\singularityfourthpart\modifier.h
+1490470103 d:\dorians programs\singularityfourthpart\modifier.h
 	"structs.h"
 
-1518053117 source:d:\dorians programs\singularityfourthpart\bug.cpp
+1518056717 source:d:\dorians programs\singularityfourthpart\bug.cpp
 	"Bug.h"
 
-1518044696 d:\dorians programs\singularityfourthpart\bug.h
+1518048296 d:\dorians programs\singularityfourthpart\bug.h
 	<string>
 	<stdlib.h>
 
-1518053167 source:d:\dorians programs\singularityfourthpart\conditional.cpp
+1525934541 source:d:\dorians programs\singularityfourthpart\conditional.cpp
 	"Conditional.h"
 
-1518046023 d:\dorians programs\singularityfourthpart\conditional.h
+1525934675 d:\dorians programs\singularityfourthpart\conditional.h
 	"Modifier.h"
 	"ConditionalBase.h"
 	<vector>
+	<iostream>
 
-1518054890 d:\dorians programs\singularityfourthpart\conditionalbase.h
+1525933610 d:\dorians programs\singularityfourthpart\conditionalbase.h
 
-1518044696 source:d:\dorians programs\singularityfourthpart\conditionalbase.cpp
+1525209822 source:d:\dorians programs\singularityfourthpart\conditionalbase.cpp
 	"ConditionalBase.h"
 
-1518044696 source:d:\dorians programs\singularityfourthpart\conditionalmanager.cpp
+1518048296 source:d:\dorians programs\singularityfourthpart\conditionalmanager.cpp
 	"ConditionalManager.h"
 
-1518044696 d:\dorians programs\singularityfourthpart\conditionalmanager.h
+1518048296 d:\dorians programs\singularityfourthpart\conditionalmanager.h
 
-1518053282 source:d:\dorians programs\singularityfourthpart\main.cpp
+1525934698 source:d:\dorians programs\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
 	"location.h"
 	"Conditional.h"
 
-1488340622 d:\dorians programs\singularityfourthpart\statestorage.h
+1488344222 d:\dorians programs\singularityfourthpart\statestorage.h
 	<cstdio>
 	<cstring>
 	<map>
@@ -176,20 +177,20 @@
 	<cstring>
 	<map>
 
-1518053467 source:d:\dorians programs\singularityfourthpart\mainloop\mainloop.cpp
+1518057067 source:d:\dorians programs\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
 
-1518053460 d:\dorians programs\singularityfourthpart\mainloop\mainloop.h
+1518057060 d:\dorians programs\singularityfourthpart\mainloop\mainloop.h
 
-1518044689 source:d:\dorians programs\singularityfourthpart\software.cpp
+1518048289 source:d:\dorians programs\singularityfourthpart\software.cpp
 	"Software.h"
 
-1518053480 d:\dorians programs\singularityfourthpart\software.h
+1518057080 d:\dorians programs\singularityfourthpart\software.h
 	"Bug.h"
 	<vector>
 
-1518044690 source:d:\dorians programs\singularityfourthpart\tickable.cpp
+1518048290 source:d:\dorians programs\singularityfourthpart\tickable.cpp
 	"tickable.h"
 
-1518044690 d:\dorians programs\singularityfourthpart\tickable.h
+1518048290 d:\dorians programs\singularityfourthpart\tickable.h
 

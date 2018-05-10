@@ -5,13 +5,13 @@
 #include "ConditionalBase.h"
 #include <vector>
 
-
+#include <iostream>
 
 template <typename T> class Conditional : public ConditionalBase
 {
    public:
       /** Default constructor */
-      Conditional();
+      Conditional(unsigned int newID);
       /** Default destructor */
       virtual ~Conditional();
 
@@ -24,17 +24,14 @@ template <typename T> class Conditional : public ConditionalBase
       void addComparedValue(T* newValue);
       void addWatchedValue(T* watchedValue);
 
-      void changeLogicOp(LogicOperators newOp);
-      void changeValueOp(ValueOperators newOp);
-
-
-
-
-
-   protected:
-   private:
-      std::vector <Conditional> Conditionals;
+      void changeLogicOp(conditionalEnums::LogicOperators newOp);
+      void changeValueOp(conditionalEnums::ValueOperators newOp);
       bool evaluate();
+
+
+   private:
+      std::vector <ConditionalBase*> Conditionals; // Array of points, to conserve memory. Remember to release conditionals when destroying.
+
 
       //T comparedValue;
       T* watchedValue; //This is what is compared with the stored Value.
