@@ -69,7 +69,7 @@ class Location
 
       bool removeDevice (unsigned long long DeviceID); // Removes the specific Device.                      | TODO
       int removeDevices (int DeviceType); // Removes all devices with the same type.                        | TODO
-      std::vector <bool> removeDevies (std::vector <int> DeviceTypes); //Calls remove for each one.         | TODO
+      std::vector <bool> removeDevices (std::vector <int> DeviceTypes); //Calls remove for each one.        | TODO
 
 
    protected:

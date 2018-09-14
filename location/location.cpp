@@ -104,6 +104,15 @@ Location::~Location()
       return false;
    }
 
+   Device getDevice(int DeviceID)
+   {
+      for (std::list<Device>::iterator it = containedDevices.begin(); it != containedDevices.end(); it++){
+         if(it -> getDeviceID() == DeviceID){
+            return *it;
+         }
+      }
+      return NULL;
+   }
 
    //}
 
@@ -116,6 +125,10 @@ Location::~Location()
    {
       //Call all the functions to recalculate cycles, risk, risk modifiers, and leftover size.
       //Or do it here, it doesn't really matter.
+      for (auto &iter : containedDevices){
+         //iter.
+         this.containedDevices
+      }
    }
 
    std::list <int> Location::tick()
