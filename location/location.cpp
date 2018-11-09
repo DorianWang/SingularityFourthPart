@@ -104,14 +104,14 @@ Location::~Location()
       return false;
    }
 
-   Device getDevice(int DeviceID)
+   Device Location::getDevice(int DeviceID)
    {
       for (std::list<Device>::iterator it = containedDevices.begin(); it != containedDevices.end(); it++){
          if(it -> getDeviceID() == DeviceID){
             return *it;
          }
       }
-      return NULL;
+      throw;
    }
 
    //}
@@ -127,7 +127,7 @@ Location::~Location()
       //Or do it here, it doesn't really matter.
       for (auto &iter : containedDevices){
          //iter.
-         this.containedDevices
+         this -> containedDevices;
       }
    }
 

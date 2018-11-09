@@ -194,3 +194,98 @@
 
 1518048290 d:\dorians programs\singularityfourthpart\tickable.h
 
+1540871496 source:c:\users\administrator\singularityfourthpart\main.cpp
+	<iostream>
+	"stateStorage.h"
+	"location.h"
+	"Conditional.h"
+
+1540871117 c:\users\administrator\singularityfourthpart\statestorage.h
+	<cstdio>
+	<cstring>
+	<map>
+
+1540871496 c:\users\administrator\singularityfourthpart\location\location.h
+	<string>
+	<map>
+	<list>
+	<vector>
+	<stdexcept>
+	"Device.h"
+	"../structs.h"
+
+1540871117 c:\users\administrator\singularityfourthpart\device\device.h
+	"../structs.h"
+
+1540871117 c:\users\administrator\singularityfourthpart\structs.h
+
+1541658055 c:\users\administrator\singularityfourthpart\conditional.h
+	"Modifier.h"
+	"ConditionalBase.h"
+	<vector>
+	<iostream>
+
+1540871117 c:\users\administrator\singularityfourthpart\modifier.h
+	"structs.h"
+
+1541648447 c:\users\administrator\singularityfourthpart\conditionalbase.h
+
+1540871496 source:c:\users\administrator\singularityfourthpart\mainloop\mainloop.cpp
+	"MainLoop.h"
+
+1540871496 c:\users\administrator\singularityfourthpart\mainloop\mainloop.h
+
+1540871496 source:c:\users\administrator\singularityfourthpart\bug.cpp
+	"Bug.h"
+
+1540871496 c:\users\administrator\singularityfourthpart\bug.h
+	<string>
+	<stdlib.h>
+
+1541652696 source:c:\users\administrator\singularityfourthpart\conditional.cpp
+	"Conditional.h"
+
+1540871496 source:c:\users\administrator\singularityfourthpart\conditionalbase.cpp
+	"ConditionalBase.h"
+
+1540871496 source:c:\users\administrator\singularityfourthpart\conditionalmanager.cpp
+	"ConditionalManager.h"
+
+1540871496 c:\users\administrator\singularityfourthpart\conditionalmanager.h
+
+1540871117 source:c:\users\administrator\singularityfourthpart\device\device.cpp
+	"Device.h"
+
+1540871117 source:c:\users\administrator\singularityfourthpart\locationmap\locationmap.cpp
+	"locationMap.h"
+
+1540871117 c:\users\administrator\singularityfourthpart\locationmap\locationmap.h
+	<vector>
+	"location.h"
+
+1540871117 source:c:\users\administrator\singularityfourthpart\modifier.cpp
+	"Modifier.h"
+
+1540871496 source:c:\users\administrator\singularityfourthpart\software.cpp
+	"Software.h"
+
+1540871496 c:\users\administrator\singularityfourthpart\software.h
+	"Bug.h"
+	<vector>
+
+1540871496 source:c:\users\administrator\singularityfourthpart\tickable.cpp
+	"tickable.h"
+
+1540871496 c:\users\administrator\singularityfourthpart\tickable.h
+
+1541583691 source:c:\users\administrator\singularityfourthpart\src\comparison.cpp
+	"Comparison.h"
+
+1541655489 c:\users\administrator\singularityfourthpart\include\comparison.h
+	"../ConditionalBase.h"
+	<vector>
+	<iostream>
+
+1541583820 source:c:\users\administrator\singularityfourthpart\location\location.cpp
+	"Location.h"
+

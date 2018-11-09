@@ -16,14 +16,15 @@ class ConditionalBase
 
       /** Default destructor */
       virtual ~ConditionalBase();
-      virtual bool checkConditional() = 0;
       virtual void addConditional(ConditionalBase* input) = 0; //Returns if the condition
       unsigned int getID(){
          return ID;
       }
 
+      virtual bool evaluate() = 0; //Returns true if the conditional is true
+
    protected:
-      virtual bool evaluate() = 0; //Returns if the condition stored in the object is true
+
       conditionalEnums::LogicOperators currentLogicOP;
       conditionalEnums::ValueOperators currentValueOp;
       int numParents = 0;

@@ -6,8 +6,14 @@
 #include <cstring>
 
 #include <map>
+#include <iostream>
+
+//For logging
+#include <fstream>
+#include <chrono>
 
 #define NUM_KEYS 256
+#define LOG_FOLDER "LOGS"
 
 
 //Structs
@@ -26,13 +32,8 @@ typedef struct modifierTemplate
    int modifierID; //TODO
    int* effects;
 
-
-
-
    bool hasRiskEffects;
 };
-
-
 
 
 /*
@@ -85,6 +86,7 @@ private:
    bool keyState[NUM_KEYS];
    bool currentKeyState[NUM_KEYS];
    std::map <int, int> globalEffectList;
+   std::fstream logFile;
 
 };
 
@@ -99,10 +101,16 @@ private:
    {
       numKeys = NUM_KEYS;
       resetAll();
+      std::string logFileName(LOG_FOLDER);
+      logFileName += "/";
+      logFileName += "/";
+      logFile.open(logFileName)
    }
 
    stateStorage::~stateStorage()
    {
+      if (logFile.is_open())
+         logFile.close();
       resetAll();
    }
 
@@ -207,6 +215,11 @@ private:
       globalEffectList = newGlobalEffects;
    }
 
+   void stateStorage::addError(std::string newError)
+   {
+
+      globalEffectList = newGlobalEffects;
+   }
 
 
    //}

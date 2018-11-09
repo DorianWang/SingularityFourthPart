@@ -21,11 +21,9 @@ template <typename T> class Conditional : public ConditionalBase
       void addLocationModifer(); //TODO: All these functions
       //void addGlobalModifer(Modifier temp);
 
-      void addComparedValue(T* newValue);
-      void addWatchedValue(T* watchedValue);
 
       void changeLogicOp(conditionalEnums::LogicOperators newOp);
-      void changeValueOp(conditionalEnums::ValueOperators newOp);
+
       bool evaluate();
 
 
@@ -34,8 +32,7 @@ template <typename T> class Conditional : public ConditionalBase
 
 
       //T comparedValue;
-      T* watchedValue; //This is what is compared with the stored Value.
-      T* comparedValuePointer; //This should point to either a constant, or a "meta" variable. (point it to # of bases, or something)
+
 
 
 
