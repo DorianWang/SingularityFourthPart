@@ -3,7 +3,7 @@
 template <typename T> Comparison<T>::Comparison(unsigned int newID)
     : ConditionalBase (newID)
 {
-    //ctor
+    ID = newID;
 }
 
 template <typename T> Comparison<T>::~Comparison()
@@ -26,9 +26,9 @@ template <typename T> void Comparison<T>::addWatchedValue(T* newValue)
 template <typename T> bool Comparison<T>::evaluate()
 {
    if (watchedValue == NULL || comparedValuePointer == NULL){
-
       throw; // Not initialized
    }
+
    switch (currentValueOp){
    case conditionalEnums::NOT_EQUAL:
       return (*watchedValue != *comparedValuePointer);
@@ -44,6 +44,7 @@ template <typename T> bool Comparison<T>::evaluate()
 
    default:
       //Set some sort of error...
+      stateInfo -> addError("Failure to recognize value of currentValueOp in Comparison.");
       throw;
       return false;
    }

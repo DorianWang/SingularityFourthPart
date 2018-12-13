@@ -25,8 +25,6 @@ class ConditionalBase
 
    protected:
 
-      conditionalEnums::LogicOperators currentLogicOP;
-      conditionalEnums::ValueOperators currentValueOp;
       int numParents = 0;
       unsigned int ID;
 

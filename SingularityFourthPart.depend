@@ -194,16 +194,19 @@
 
 1518048290 d:\dorians programs\singularityfourthpart\tickable.h
 
-1540871496 source:c:\users\administrator\singularityfourthpart\main.cpp
+1543302474 source:c:\users\administrator\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
 	"location.h"
 	"Conditional.h"
 
-1540871117 c:\users\administrator\singularityfourthpart\statestorage.h
+1543302532 c:\users\administrator\singularityfourthpart\statestorage.h
 	<cstdio>
 	<cstring>
 	<map>
+	<iostream>
+	<fstream>
+	<chrono>
 
 1540871496 c:\users\administrator\singularityfourthpart\location\location.h
 	<string>
@@ -219,7 +222,7 @@
 
 1540871117 c:\users\administrator\singularityfourthpart\structs.h
 
-1541658055 c:\users\administrator\singularityfourthpart\conditional.h
+1543227271 c:\users\administrator\singularityfourthpart\conditional.h
 	"Modifier.h"
 	"ConditionalBase.h"
 	<vector>
@@ -228,7 +231,7 @@
 1540871117 c:\users\administrator\singularityfourthpart\modifier.h
 	"structs.h"
 
-1541648447 c:\users\administrator\singularityfourthpart\conditionalbase.h
+1543299223 c:\users\administrator\singularityfourthpart\conditionalbase.h
 
 1540871496 source:c:\users\administrator\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
@@ -278,11 +281,12 @@
 
 1540871496 c:\users\administrator\singularityfourthpart\tickable.h
 
-1541583691 source:c:\users\administrator\singularityfourthpart\src\comparison.cpp
+1543302495 source:c:\users\administrator\singularityfourthpart\src\comparison.cpp
 	"Comparison.h"
 
-1541655489 c:\users\administrator\singularityfourthpart\include\comparison.h
+1543227257 c:\users\administrator\singularityfourthpart\include\comparison.h
 	"../ConditionalBase.h"
+	"../stateStorage.h"
 	<vector>
 	<iostream>
 

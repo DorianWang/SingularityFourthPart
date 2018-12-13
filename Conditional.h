@@ -29,7 +29,7 @@ template <typename T> class Conditional : public ConditionalBase
 
    private:
       std::vector <ConditionalBase*> Conditionals; // Array of points, to conserve memory. Remember to release conditionals when destroying.
-
+      conditionalEnums::LogicOperators currentLogicOP;
 
       //T comparedValue;
 

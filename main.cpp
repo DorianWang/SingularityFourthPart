@@ -15,7 +15,7 @@
 int main()
 {
 
-   stateStorage* stateInfo = new stateStorage();
+   stateStorage* stateInfo = new stateStorage(2);
 
    riskModifiers testRMod; testRMod.covertModifier = 13; testRMod.mediaModifier = 104; testRMod.publicModifier = 1112;
    testRMod.risk = 100;

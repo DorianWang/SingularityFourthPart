@@ -2,6 +2,7 @@
 #define COMPARISON_H
 
 #include "../ConditionalBase.h"
+#include "../stateStorage.h"
 
 #include <vector>
 #include <iostream>
@@ -26,6 +27,7 @@ template <typename T> class Comparison : public ConditionalBase
     private:
       T* watchedValue; //This is what is compared with the stored Value.
       T* comparedValuePointer; //This should point to either a constant, or a "meta" variable. (point it to # of bases, or something)
+      conditionalEnums::ValueOperators currentValueOp;
 
 };
 
