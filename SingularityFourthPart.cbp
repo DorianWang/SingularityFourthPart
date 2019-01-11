@@ -17,6 +17,7 @@
 					<Add directory="locationMap" />
 					<Add directory="location" />
 					<Add directory="Device" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -30,6 +31,7 @@
 					<Add directory="locationMap" />
 					<Add directory="location" />
 					<Add directory="Device" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -59,11 +61,13 @@
 		<Unit filename="Modifier.h" />
 		<Unit filename="Software.cpp" />
 		<Unit filename="Software.h" />
+		<Unit filename="include/Comparison.h" />
 		<Unit filename="locationMap/locationMap.cpp" />
 		<Unit filename="locationMap/locationMap.h" />
 		<Unit filename="location/location.cpp" />
 		<Unit filename="location/location.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Comparison.cpp" />
 		<Unit filename="stateStorage.h" />
 		<Unit filename="structs.h" />
 		<Unit filename="tickable.cpp" />

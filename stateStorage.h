@@ -6,8 +6,14 @@
 #include <cstring>
 
 #include <map>
+#include <iostream>
+
+//For logging
+#include <fstream>
+#include <chrono>
 
 #define NUM_KEYS 256
+#define LOG_FOLDER "LOGS"
 
 
 //Structs
@@ -26,13 +32,8 @@ typedef struct modifierTemplate
    int modifierID; //TODO
    int* effects;
 
-
-
-
    bool hasRiskEffects;
 };
-
-
 
 
 /*
@@ -53,7 +54,7 @@ public:
    int numKeys;
 
    //Constructors and Destructors
-   inline stateStorage();
+   inline stateStorage(int logSetting);
    inline ~stateStorage();
 
    //Reseting functions
@@ -78,6 +79,9 @@ public:
    inline void removeGlobalEffect(int key);
    inline void setGlobalEffects(std::map <int, int> newGlobalEffects);
 
+   inline void addLogLine(std::string newLine);
+   inline void addError(std::string newError);
+
 private:
 
 
@@ -85,6 +89,9 @@ private:
    bool keyState[NUM_KEYS];
    bool currentKeyState[NUM_KEYS];
    std::map <int, int> globalEffectList;
+   std::fstream logFile;
+
+   int logSetting; //Values -> 0 no logging, 1 error logging, 2 all logging, default 1
 
 };
 
@@ -95,14 +102,25 @@ private:
    //Constructor and Destructor
    //{
 
-   stateStorage::stateStorage()
+   stateStorage::stateStorage(int currentLogSetting)
    {
       numKeys = NUM_KEYS;
       resetAll();
+      logSetting = currentLogSetting;
+      if (logSetting > 2 || logSetting < 0){
+         logSetting = 1;
+      }
+      std::string logFileName(LOG_FOLDER);
+      logFileName += "/";
+      //std::time_t
+      //logFileName += std::chrono::;
+      logFile.open(logFileName);
    }
 
    stateStorage::~stateStorage()
    {
+      if (logFile.is_open())
+         logFile.close();
       resetAll();
    }
 
@@ -178,13 +196,13 @@ private:
 
    void stateStorage::setKeyboard(char keyDown)
    {
-      keyState[keyDown] = true;
+      keyState[(unsigned int) keyDown] = true;
    }
 
    void stateStorage::setCurrentKey(char keyDown)
    {
       resetCurrentKey();
-      currentKeyState[keyDown] = true;
+      currentKeyState[(unsigned int) keyDown] = true;
    }
 
    bool stateStorage::addGlobalEffect(int key, int duration)
@@ -207,6 +225,19 @@ private:
       globalEffectList = newGlobalEffects;
    }
 
+   void stateStorage::addLogLine(std::string newLine)
+   {
+      if( logSetting == 2 ){
+         logFile << (newLine + "\n");
+      }
+   }
+
+   void stateStorage::addError(std::string newError)
+   {
+      if (logSetting > 0){
+         logFile << (newError + "\n");
+      }
+   }
 
 
    //}

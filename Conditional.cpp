@@ -16,13 +16,12 @@ template <typename T> Conditional<T>::~Conditional()
 template <typename T> bool Conditional<T>::checkConditional()
 {
    unsigned int counter = 0; unsigned int i = 0;
-   if (evaluate()) counter++;
+
    switch (this -> currentLogicOP){
 
    case (conditionalEnums::AND):
-      if (counter == 0) return false;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i] -> checkConditional() == false){
+         if (Conditionals[i] -> evaluate() == false){
             return false;
          }
       }
@@ -30,9 +29,8 @@ template <typename T> bool Conditional<T>::checkConditional()
       break;
 
    case (conditionalEnums::NAND):
-      if (counter == 0) return true;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i] -> checkConditional() == false){
+         if (Conditionals[i] -> evaluate() == false){
             return true;
          }
       }
@@ -40,9 +38,8 @@ template <typename T> bool Conditional<T>::checkConditional()
       break;
 
    case (conditionalEnums::OR):
-      if (counter == 1) return true;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i] -> checkConditional() == true){
+         if (Conditionals[i] -> evaluate() == true){
             return true;
          }
       }
@@ -50,9 +47,8 @@ template <typename T> bool Conditional<T>::checkConditional()
    break;
 
    case (conditionalEnums::NOR):
-      if (counter == 1) return false;
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i] -> checkConditional() == true){
+         if (Conditionals[i] -> evaluate() == true){
             return false;
          }
       }
@@ -61,16 +57,16 @@ template <typename T> bool Conditional<T>::checkConditional()
 
    case (conditionalEnums::XOR):
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i] -> checkConditional() == true){
+         if (Conditionals[i] -> evaluate() == true){
             counter++;
          }
       }
-      if (counter % 2) return true;
+      if (counter % 2) return true; //works best with 2 inputs, but I guess it could work with more
    break;
 
    case (conditionalEnums::MAJOR):
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i] -> checkConditional() == true){
+         if (Conditionals[i] -> evaluate() == true){
             counter++;
          }
       }
@@ -79,7 +75,7 @@ template <typename T> bool Conditional<T>::checkConditional()
 
    case (conditionalEnums::MINOR):
       for (i = 0; i < Conditionals.size(); i++){
-         if (Conditionals[i] -> checkConditional() == true){
+         if (Conditionals[i] -> evaluate() == true){
             counter++;
          }
       }
@@ -91,27 +87,9 @@ template <typename T> bool Conditional<T>::checkConditional()
    return true; //Default result, I might put an exception here.
 }
 
-//enum ValueOperators{NOT_EQUAL, EQUAL, GREATER, LESSER};
 template <typename T> bool Conditional<T>::evaluate()
 {
-   if (watchedValue == NULL || comparedValuePointer == NULL) throw; // Not initialized
-   switch (currentValueOp){
-   case conditionalEnums::NOT_EQUAL:
-      return (*watchedValue != *comparedValuePointer);
-
-   case conditionalEnums::EQUAL:
-      return (*watchedValue == *comparedValuePointer);
-
-   case conditionalEnums::GREATER:
-      return (*watchedValue > *comparedValuePointer);
-
-   case conditionalEnums::LESSER:
-      return (*watchedValue < *comparedValuePointer);
-
-   default:
-      //Set some sort of error...
-      return false;
-   }
+   return this -> checkConditional();
 }
 
 
@@ -125,24 +103,12 @@ template <typename T> void Conditional<T>::addConditional(ConditionalBase* newCo
    return;
 }
 
-template <typename T> void Conditional<T>::addComparedValue(T* newValue)
-{
-   comparedValuePointer = newValue;
-};
-
-template <typename T> void Conditional<T>::addWatchedValue(T* newValue)
-{
-   watchedValue = newValue;
-};
 
 template <typename T> void Conditional<T>::changeLogicOp(conditionalEnums::LogicOperators newOp)
 {
    currentLogicOP = newOp;
 }
-template <typename T> void Conditional<T>::changeValueOp(conditionalEnums::ValueOperators newOp)
-{
-   currentValueOp = newOp;
-}
+
 
 
 //}

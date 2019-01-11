@@ -15,7 +15,7 @@
 int main()
 {
 
-   stateStorage* stateInfo = new stateStorage();
+   stateStorage* stateInfo = new stateStorage(2);
 
    riskModifiers testRMod; testRMod.covertModifier = 13; testRMod.mediaModifier = 104; testRMod.publicModifier = 1112;
    testRMod.risk = 100;
@@ -35,26 +35,26 @@ int main()
    Conditional <int> testConditional(0); Conditional <int> bartestConditional(1);
    std::cout << "made a conditional " << conditionalEnums::AND << conditionalEnums::GREATER << std::endl;
 
-   testConditional.changeValueOp(conditionalEnums::EQUAL);
-   bartestConditional.changeValueOp(conditionalEnums::EQUAL);
+   //testConditional.changeValueOp(conditionalEnums::EQUAL);
+   //bartestConditional.changeValueOp(conditionalEnums::EQUAL);
 
    testConditional.changeLogicOp(conditionalEnums::AND);
    bartestConditional.changeLogicOp(conditionalEnums::AND);
 
    std::cout << "changed it" << std::endl;
    int a = 4; int b = 3; int c = 2;
-   testConditional.addComparedValue(&a); testConditional.addWatchedValue(&b); bartestConditional.addComparedValue(&a); bartestConditional.addWatchedValue(&c);
-   std::cout << testConditional.checkConditional() << std::endl;
-   b = 4;
-   std::cout << testConditional.checkConditional() << std::endl;
+   //testConditional.addComparedValue(&a); testConditional.addWatchedValue(&b); bartestConditional.addComparedValue(&a); bartestConditional.addWatchedValue(&c);
+   //std::cout << testConditional.checkConditional() << std::endl;
+   //b = 4;
+   //std::cout << testConditional.checkConditional() << std::endl;
 
-   testConditional.addConditional(&bartestConditional);
+   //testConditional.addConditional(&bartestConditional);
 
-   std::cout << testConditional.checkConditional() << std::endl;
-   c = 4;
-   std::cout << testConditional.checkConditional() << std::endl;
+   //std::cout << testConditional.checkConditional() << std::endl;
+   //c = 4;
+   //std::cout << testConditional.checkConditional() << std::endl;
 
-   std::cout << "Hello world!" << std::endl;
+   //std::cout << "Hello world!" << std::endl;
    return 0;
 
 }
