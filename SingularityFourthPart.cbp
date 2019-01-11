@@ -43,6 +43,8 @@
 		</Compiler>
 		<Unit filename="Bug.cpp" />
 		<Unit filename="Bug.h" />
+		<Unit filename="ConditionParser.cpp" />
+		<Unit filename="ConditionParser.h" />
 		<Unit filename="Conditional.cpp" />
 		<Unit filename="Conditional.h" />
 		<Unit filename="ConditionalBase.cpp" />

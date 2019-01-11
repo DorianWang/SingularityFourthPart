@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1478813049 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
+1538402718 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
 	"location.h"
+	"Conditional.h"
 
-1466439308 source:c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.cpp
+1518720222 source:c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.cpp
 	"MainLoop.h"
 
-1466439308 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
+1518720222 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
 
 1488209803 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
 	<cstdio>
@@ -51,7 +52,7 @@
 1489518508 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
 	"Location.h"
 
-1488209802 c:\users\admin\documents\github\singularityfourthpart\location\location.h
+1538402718 c:\users\admin\documents\github\singularityfourthpart\location\location.h
 	<string>
 	<map>
 	<list>
@@ -92,9 +93,11 @@
 1489771588 source:c:\users\admin\documents\github\singularityfourthpart\conditional.cpp
 	"Conditional.h"
 
-1489773015 c:\users\admin\documents\github\singularityfourthpart\conditional.h
+1538402718 c:\users\admin\documents\github\singularityfourthpart\conditional.h
 	"Modifier.h"
+	"ConditionalBase.h"
 	<vector>
+	<iostream>
 
 1489173518 c:\users\admin\documents\github\singularityfourthpart\modifier.h
 	"structs.h"
@@ -193,4 +196,6 @@
 	"tickable.h"
 
 1518048290 d:\dorians programs\singularityfourthpart\tickable.h
+
+1538402718 c:\users\admin\documents\github\singularityfourthpart\conditionalbase.h
 
