@@ -16,7 +16,7 @@ class ConditionalBase
 
       /** Default destructor */
       virtual ~ConditionalBase();
-      virtual void addConditional(ConditionalBase* input) = 0; //Returns if the condition
+      virtual void addConditional(ConditionalBase* input) = 0; //Must be implemented
       unsigned int getID(){
          return ID;
       }
@@ -32,7 +32,21 @@ class ConditionalBase
 
 };
 
-
+class ConstConditional : ConditionalBase
+{
+   bool constValue;
+   public:
+      ConstConditional(unsigned int newID, bool constCondition) : ConditionalBase (newID){
+         constValue = constCondition;
+         ID = newID;
+      };
+      void addConditional(ConditionalBase* input){
+         ; //Don't do anything, it won't be evaluated
+      }
+      bool evaluate(){
+         return constValue;
+      }
+};
 
 
 

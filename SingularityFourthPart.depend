@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1538402718 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
+1552663501 source:c:\users\admin\documents\github\singularityfourthpart\main.cpp
 	<iostream>
 	"stateStorage.h"
 	"location.h"
@@ -10,10 +10,13 @@
 
 1518720222 c:\users\admin\documents\github\singularityfourthpart\mainloop\mainloop.h
 
-1488209803 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
+1552611940 c:\users\admin\documents\github\singularityfourthpart\statestorage.h
 	<cstdio>
 	<cstring>
 	<map>
+	<iostream>
+	<fstream>
+	<chrono>
 
 1487970952 source:d:\dorian's programs\singularityfourthpart\main.cpp
 	<iostream>
@@ -49,10 +52,10 @@
 	<vector>
 	"location.h"
 
-1489518508 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
+1552611940 source:c:\users\admin\documents\github\singularityfourthpart\location\location.cpp
 	"Location.h"
 
-1538402718 c:\users\admin\documents\github\singularityfourthpart\location\location.h
+1552610391 c:\users\admin\documents\github\singularityfourthpart\location\location.h
 	<string>
 	<map>
 	<list>
@@ -90,10 +93,10 @@
 
 1488209802 c:\users\admin\documents\github\singularityfourthpart\structs.h
 
-1489771588 source:c:\users\admin\documents\github\singularityfourthpart\conditional.cpp
+1547249101 source:c:\users\admin\documents\github\singularityfourthpart\conditional.cpp
 	"Conditional.h"
 
-1538402718 c:\users\admin\documents\github\singularityfourthpart\conditional.h
+1547249101 c:\users\admin\documents\github\singularityfourthpart\conditional.h
 	"Modifier.h"
 	"ConditionalBase.h"
 	<vector>
@@ -197,5 +200,50 @@
 
 1518048290 d:\dorians programs\singularityfourthpart\tickable.h
 
-1538402718 c:\users\admin\documents\github\singularityfourthpart\conditionalbase.h
+1552334602 c:\users\admin\documents\github\singularityfourthpart\conditionalbase.h
+
+1518720222 source:c:\users\admin\documents\github\singularityfourthpart\bug.cpp
+	"Bug.h"
+
+1517598361 c:\users\admin\documents\github\singularityfourthpart\bug.h
+	<string>
+	<stdlib.h>
+
+1538402718 source:c:\users\admin\documents\github\singularityfourthpart\conditionalbase.cpp
+	"ConditionalBase.h"
+
+1515786547 source:c:\users\admin\documents\github\singularityfourthpart\conditionalmanager.cpp
+	"ConditionalManager.h"
+
+1515786547 c:\users\admin\documents\github\singularityfourthpart\conditionalmanager.h
+
+1552595562 source:c:\users\admin\documents\github\singularityfourthpart\conditionparser.cpp
+	"ConditionParser.h"
+
+1552592222 c:\users\admin\documents\github\singularityfourthpart\conditionparser.h
+	<vector>
+	<map>
+	<string>
+	<exception>
+
+1492713065 source:c:\users\admin\documents\github\singularityfourthpart\software.cpp
+	"Software.h"
+
+1518720222 c:\users\admin\documents\github\singularityfourthpart\software.h
+	"Bug.h"
+	<vector>
+
+1547249101 source:c:\users\admin\documents\github\singularityfourthpart\src\comparison.cpp
+	"Comparison.h"
+
+1547249101 c:\users\admin\documents\github\singularityfourthpart\include\comparison.h
+	"../ConditionalBase.h"
+	"../stateStorage.h"
+	<vector>
+	<iostream>
+
+1497647757 source:c:\users\admin\documents\github\singularityfourthpart\tickable.cpp
+	"tickable.h"
+
+1497647832 c:\users\admin\documents\github\singularityfourthpart\tickable.h
 

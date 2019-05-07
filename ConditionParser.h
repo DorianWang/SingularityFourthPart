@@ -17,6 +17,8 @@ class ConditionParser
       std::vector <std::string> symbolsList;
       std::map <std::string, int> symbolsMap;
 
+      int variableNameToSymbol(std::string varName);
+
 
    protected:
    private:

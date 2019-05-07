@@ -19,7 +19,7 @@
 //Structs
 //{
 
-typedef struct mouseInfo
+struct mouseInfo
 {
    int x;
    int y;
@@ -27,7 +27,7 @@ typedef struct mouseInfo
 };
 
 
-typedef struct modifierTemplate
+struct modifierTemplate
 {
    int modifierID; //TODO
    int* effects;

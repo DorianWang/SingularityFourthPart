@@ -50,7 +50,7 @@ class Location
                                      //Returns MODIFIER_NOT_INITIALIZED if the modifier is not initialized.
       bool hasActiveModifier(int modifier); //Returns true if modifier exist and is -1 or above 0.          | Complete
 
-      Device getDevice(int DeviceID); //Gets the device with the exact ID                                   | TODO
+      Device getDevice(unsigned long long DeviceID); //Gets the device with the exact ID                    | TODO
 
       std::list <Device> getDevices(int DeviceType); //Gets all devices with the same type.                 | TODO
 

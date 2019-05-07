@@ -104,7 +104,7 @@ Location::~Location()
       return false;
    }
 
-   Device Location::getDevice(int DeviceID)
+   Device Location::getDevice(unsigned long long DeviceID)
    {
       for (std::list<Device>::iterator it = containedDevices.begin(); it != containedDevices.end(); it++){
          if(it -> getDeviceID() == DeviceID){

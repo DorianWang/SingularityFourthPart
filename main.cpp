@@ -16,6 +16,7 @@ int main()
 {
 
    stateStorage* stateInfo = new stateStorage(2);
+   stateInfo -> addLogLine("This is a test!");
 
    riskModifiers testRMod; testRMod.covertModifier = 13; testRMod.mediaModifier = 104; testRMod.publicModifier = 1112;
    testRMod.risk = 100;
@@ -44,15 +45,15 @@ int main()
    std::cout << "changed it" << std::endl;
    int a = 4; int b = 3; int c = 2;
    //testConditional.addComparedValue(&a); testConditional.addWatchedValue(&b); bartestConditional.addComparedValue(&a); bartestConditional.addWatchedValue(&c);
-   //std::cout << testConditional.checkConditional() << std::endl;
-   //b = 4;
-   //std::cout << testConditional.checkConditional() << std::endl;
+   std::cout << testConditional.checkConditional() << std::endl;
+   b = 4;
+   std::cout << testConditional.checkConditional() << std::endl;
 
-   //testConditional.addConditional(&bartestConditional);
+   testConditional.addConditional(&bartestConditional);
 
-   //std::cout << testConditional.checkConditional() << std::endl;
-   //c = 4;
-   //std::cout << testConditional.checkConditional() << std::endl;
+   std::cout << testConditional.checkConditional() << std::endl;
+   c = 4;
+   std::cout << testConditional.checkConditional() << std::endl;
 
    //std::cout << "Hello world!" << std::endl;
    return 0;
